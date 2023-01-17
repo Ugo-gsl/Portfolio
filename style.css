@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: #313131;
+}
+body{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vh;
+}
+.box{
+    position: relative;
+    width: 375px;
+    height: 750px;
+    background: #666;
+    border-radius: 62.5px;
+    left: 5%;
+}
+
+.inner{
+    position: absolute;
+    inset: 3px;
+    background: url(img/bg.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 60px;
+    border: 10px solid #000;
+    display: flex;
+    justify-content: center;
+}
+
+.btn{
+    position: absolute;
+    top: 137.5px;
+    left: -2px;
+    width: 3.75px;
+    height: 32.5px;
+    background: radial-gradient(#ccc, #666, #222);
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    z-index: 10;
+}
+.btn.btn2{
+    top: 200px;
+    height: 50px;
+}
+.btn.btn3{
+    top: 262.5px;
+    height: 50px;
+}
+.rightSideBtn{
+    position: absolute;
+    top: 212.5px;
+    right: -2px;
+    width: 3.75px;
+    height: 87.5px;
+    background: radial-gradient(#ccc, #666, #222);
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    z-index: 10;
+}
+.island-popup{
+    position: absolute;
+    top: 12.5px;
+    width: 112.5px;
+    height: 31.25px;
+    border-radius: 25px;
+    background: #000;
+    transition: 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.island-popup.active{
+    width: 312.5px;
+    height: 187.5px;
+    border-radius: 50px;
+    align-items: flex-start;
+    padding: 0 10px;
+    background: #0f0f0f;
+}
+.text{
+    position: absolute;
+    width: 70%;
+    height: 750px;
+    background: #252526;
+    border-radius: 62.5px;
+    right: 5%;
+}
+.text.active{
+    background: red;
+}
+
+.program-bottom{
+  position: absolute;
+  bottom: 2%;
+  width: 95%;
+  height: 100px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgb(90, 88, 88);
+  border-radius: 45px;
+  opacity: 0.6;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.swiper{
+    position: absolute;
+    top: 8%;
+    width: 100%;
+    height: 70%;
+    margin: 0 auto;
+    background: none;
+}
+.swiper-p{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background: none;
+    justify-content: space-around;
+}
+.swiper a{
+    display: block;
+    text-transform: capitalize;
+    font-size: 11px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 1.5;
+    text-align: center;
+    background: none;
+    align-items: center;
+}
+.swiper  i{
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8px;
+    font-size: 50px;
+
+    align-items: center;
+}
+i.fa-facebook{
+    background-color: dodgerblue;
+    width: 325px;
+    height: 145px;
+}
+i.fa-instagram{
+    background-color: crimson;
+    width: 150px;
+    height: 150px;
+}
+i.fa-youtube{
+    background-color: red;
+}
+i.fa-twitter{
+    background-color: cornflowerblue;
+}
+i.fa-amazon{
+    background-color: orange;
+}
+i.fa-viber{
+    background-color: mediumslateblue;
+    width: 325px;
+    height: 145px;
+}
+iframe {
+    border-radius: 15px;
+}
