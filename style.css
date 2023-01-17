@@ -123,6 +123,8 @@ body{
 
 
 
+
+
 .swiper{
     position: absolute;
     top: 8%;
@@ -148,6 +150,11 @@ body{
     text-align: center;
     background: none;
     align-items: center;
+}
+i.fa_viber{
+    border-radius: 0px;
+    margin: 0px;
+    
 }
 .swiper  i{
     width: 60px;
