@@ -87,7 +87,7 @@ body{
 }
 .text{
     position: absolute;
-    width: 70%;
+    width: 60%;
     height: 750px;
     background: #252526;
     border-radius: 62.5px;
@@ -107,6 +107,7 @@ body{
   border-radius: 45px;
   opacity: 0.6;
 }
+
 
 
 
