@@ -98,7 +98,6 @@ body{
 .text.active{
     background: red;
 }
-
 .program-bottom{
   position: absolute;
   bottom: 2%;
@@ -109,24 +108,6 @@ body{
   border-radius: 45px;
   opacity: 0.6;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .swiper{
     position: absolute;
     top: 8%;
@@ -705,3 +686,5 @@ ul {
   .resume .func .interests-items div span {
     display: block;
   }
+=======
+>>>>>>> e5d523184450e02e41cc52676d9de0e7bcf9dd45
