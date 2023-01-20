@@ -75,7 +75,7 @@ xpbuton.onclick = function() {
     xp.classList.add('active');
     }
 
-let edu = document.querySelector('.curriculum') ;
+let edu = document.querySelector('.curriculum2') ;
 let edubuton = document.querySelector('.edu');
 edubuton.onclick = function() {
     $('.active').removeClass('active');;
