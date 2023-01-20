@@ -39,3 +39,52 @@ function efectoHabilidades(){
 window.onscroll = function(){
     efectoHabilidades();
 } 
+
+
+let popup = document.querySelector('.island-popup');
+popup.onclick = function() {
+    popup.classList.toggle('active');
+    }
+
+
+let sobremi = document.querySelector('.sobremi') ;
+let about = document.querySelector('.abouteme');
+about.onclick = function() {
+    $('.active').removeClass('active');;
+    sobremi.classList.add('active');
+    }
+
+let skill = document.querySelector('.skills') ;
+let skillbuton = document.querySelector('.skilll');
+skillbuton.onclick = function() {
+    $('.active').removeClass('active');;
+    skill.classList.add('active');
+    }
+
+let contact = document.querySelector('.contacto') ;
+let contactbuton = document.querySelector('.contact');
+contactbuton.onclick = function() {
+    $('.active').removeClass('active');;
+    contact.classList.add('active');
+    }
+
+let xp = document.querySelector('.curriculum') ;
+let xpbuton = document.querySelector('.xp');
+xpbuton.onclick = function() {
+    $('.active').removeClass('active');;
+    xp.classList.add('active');
+    }
+
+let edu = document.querySelector('.curriculum') ;
+let edubuton = document.querySelector('.edu');
+edubuton.onclick = function() {
+    $('.active').removeClass('active');;
+    edu.classList.add('active');
+    }
+
+let home = document.querySelector('.homee') ;
+let homebuton = document.querySelector('.program-bottom');
+homebuton.onclick = function() {
+    $('.active').removeClass('active');;
+    home.classList.add('active');
+    }

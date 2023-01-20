@@ -15,6 +15,15 @@ body{
     min-height: 100vh;
     width: 100vh;
 }
+ul{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: none;
+    justify-content: space-around; 
+}
+
 .box{
     position: relative;
     width: 375px;
@@ -107,6 +116,7 @@ body{
   box-shadow: 0 0 10px rgb(90, 88, 88);
   border-radius: 45px;
   opacity: 0.6;
+  cursor: pointer;
 }
 .swiper{
     position: absolute;
@@ -158,8 +168,9 @@ i.abouteme {
     width: 325px;
     height: 145px;
 }
+
 i.map{
-    background-color: crimson;
+    background-color: none;
     width: 150px;
     height: 150px;
 }
@@ -168,6 +179,7 @@ i.xp{
 }
 i.edu{
     background-color: cornflowerblue;
+    
 }
 i.contact{
     background-color: orange;
@@ -188,11 +200,6 @@ iframe {
 
 /* SECCION S K I L L S */
 .skills{
-    color: #fff;
-    padding: 50px 20px;
-    display: none;
-}
-#skills{
     color: #fff;
     padding: 50px 20px;
     display: none;
@@ -496,7 +503,7 @@ iframe {
     color: #fff;
     padding: 50px 0;
     display: block;
-    transition: 500ms;
+    transition: 500s;
 }
 .contacto .contenido-seccion{
     max-width: 1100px;
@@ -634,29 +641,6 @@ footer .arriba{
 
 
 /* SECCION RESPONSIVE */
-@media screen and (max-width:980px){
-    nav{
-        display: none;
-    }
-    .nav-responsive{
-        display: block;
-    }
-    nav.responsive{
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 75px;
-        background-color: #252A2E;
-        width: 180px;
-    }
-    nav.responsive ul{
-        display: block !important;
-    }
-    nav.responsive ul li{
-        border-bottom: 1px solid #fff;
-        padding: 10px 0;
-    }
-}
 @media screen and (max-width:700px){
     .sobremi .fila{
         display: block;
@@ -714,69 +698,19 @@ footer .arriba{
 
 
 
-.inicio{
-    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
-    url(img/fondo.jpg);
-    background-size: cover;
-    height: 100vh;
-    color: #fff;
-    display: flex;
-    align-items: center;
 
-}
-.inicio .contenido-banner{
-    padding: 20px;
-    background-color: #1e2326;
-    max-width: 350px;
-    margin: auto;
-    text-align: center;
-    border-radius: 40px;
-}
-.inicio .contenido-banner img{
-    margin-top: 40px;
-    border: 10px solid #1CB698;
-    display: block;
-    width: 80%;
-    margin: auto;
-    border-radius: 100%;
-}
-.inicio .contenido-banner h1{
-    margin-top: 40px;
-    font-size: 42px;
-    font-family: 'Righteous';
-}
-.inicio .contenido-banner h2{
-    font-size: 15px;
-    font-weight: normal;
-}
-.inicio .contenido-banner .redes a{
-    color: #fff;
-    display: inline-block;
-    text-decoration: none;
-    border: 1px solid #fff;
-    border-radius: 100%;
-    width: 42px;
-    height: 42px;
-    line-height: 42px;
-    margin: 40px 5px;
-    font-size: 20px;
-    transition: .3s;
-}
-.inicio .contenido-banner .redes a:hover{
-    background-color: #1CB698;
-}
 .sobremi{
     color: #fff;
     padding: 50px 20px;
     display: none;
-    transition: 0.5s ease-in-out;
-
 }
 .sobremi.active{
     color: #fff;
     padding: 50px 20px;
     display: block;
 }
+
+
 .sobremi .contenido-seccion{
     max-width: 1100px;
     margin: auto;
@@ -875,7 +809,21 @@ footer .arriba{
     width: 100%;
 }
 
-#sobreme{
- display: block;
 
+
+li{
+    list-style: none;
 }
+
+.homee{
+    color: #fff;
+    padding: 50px 20px;
+    display: none;
+}
+.homee.active{
+    color: #fff;
+    padding: 50px 20px;
+    display: block;
+}
+
+
