@@ -151,26 +151,26 @@ i.fa_viber{
 
     align-items: center;
 }
-i.fa-facebook{
+i.abouteme{
     background-color: dodgerblue;
     width: 325px;
     height: 145px;
 }
-i.fa-instagram{
+i.map{
     background-color: crimson;
     width: 150px;
     height: 150px;
 }
-i.fa-youtube{
+i.xp{
     background-color: red;
 }
-i.fa-twitter{
+i.edu{
     background-color: cornflowerblue;
 }
-i.fa-amazon{
+i.contact{
     background-color: orange;
 }
-i.fa-viber{
+i.skilll{
     background-color: mediumslateblue;
     width: 325px;
     height: 145px;
@@ -188,6 +188,18 @@ iframe {
 .skills{
     color: #fff;
     padding: 50px 20px;
+    display: none;
+}
+#skills{
+    color: #fff;
+    padding: 50px 20px;
+    display: none;
+}
+.skills.active{
+    color: #fff;
+    padding: 50px 20px;
+    display:block;
+
 }
 .skills .contenido-seccion{
     max-width: 1100px;
@@ -353,6 +365,12 @@ iframe {
 .curriculum{
     color: #fff;
     padding: 50px 20px;
+    display: none;
+}
+.curriculum.active{
+    color: #fff;
+    padding: 50px 20px;
+    display: block;
 }
 .curriculum .contenido-seccion{
     max-width: 1100px;
@@ -469,6 +487,14 @@ iframe {
     background-image: url(img/contact_bg.png);
     color: #fff;
     padding: 50px 0;
+    display: none;
+}
+.contacto.active{
+    background-image: url(img/contact_bg.png);
+    color: #fff;
+    padding: 50px 0;
+    display: block;
+    transition: 500ms;
 }
 .contacto .contenido-seccion{
     max-width: 1100px;
@@ -694,6 +720,7 @@ footer .arriba{
     color: #fff;
     display: flex;
     align-items: center;
+
 }
 .inicio .contenido-banner{
     padding: 20px;
@@ -739,6 +766,12 @@ footer .arriba{
 .sobremi{
     color: #fff;
     padding: 50px 20px;
+    display: none;
+}
+.sobremi.active{
+    color: #fff;
+    padding: 50px 20px;
+    display: block;
 }
 .sobremi .contenido-seccion{
     max-width: 1100px;

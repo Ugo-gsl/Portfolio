@@ -12,14 +12,14 @@
         <div class="inner">
             <div class="swiper">
                 <div class="swiper-p">
-                    <a href="aboutme"><i class="fa-facebook"></i>About me</a>
-                    <a href="#"><i class="fa-instagram"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44768.844754902326!2d4.473188179203633!3d45.46874034327653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f500f391611d25%3A0x4093cafcbe80c10!2s42400%20Saint-Chamond!5e0!3m2!1sfr!2sfr!4v1673901139932!5m2!1sfr!2sfr" width="150" height="150" border-radius="15" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></i>Saint-Chamond</a>
+                    <a href="/abouteme.html"><i class="abouteme"></i>About me</a>
+                    <a href="#"><i class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44768.844754902326!2d4.473188179203633!3d45.46874034327653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f500f391611d25%3A0x4093cafcbe80c10!2s42400%20Saint-Chamond!5e0!3m2!1sfr!2sfr!4v1673901139932!5m2!1sfr!2sfr" width="150" height="150" border-radius="15" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></i>Saint-Chamond</a>
                     <a href="#">
-                        <i class="fa-youtube"></i>Experience
-                        <i class="fa-amazon"></i>Contact
+                        <i class="xp"></i>Experience
+                        <i class="contact"></i>Contact
                     </a>
-                    <a href="#"><i class="fa-twitter"></i>Education</a>
-                    <a href="#"><i class="fa-viber">
+                    <a href="#"><i class="edu"></i>Education</a>
+                    <a href="#"><i class="skilll">
                         
                     </i>Skills</a>
                 </div>
@@ -35,11 +35,11 @@
         <i class="rightSideBtn"></i>
     </div>
     <div class="text">
-        <!-- <section class="skills" id="skills">
+        <section class="skills" id="skills" href="#skills">
             <div class="contenido-seccion">
                 <h2>Skills</h2>
                 <div class="fila">
-                    <!-- Technical Skill 
+              
                     <div class="col">
                         <h3>Technical Skills</h3>
                         <div class="skill">
@@ -129,9 +129,9 @@
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
 
-        <!-- <section id="curriculum" class="curriculum">
+        <section id="curriculum" class="curriculum">
             <div class="contenido-seccion">
                 <h2>Curriculum</h2>
                 <div class="fila">
@@ -198,11 +198,11 @@
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
 
 
 
-        <!-- <section id="contacto" class="contacto">
+        <section id="contacto" class="contacto">
             <div class="contenido-seccion">
                 <h2>CONTACTO</h2>
                 <div class="fila">
@@ -238,7 +238,7 @@
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
 
 
 
@@ -290,6 +290,43 @@
             popup.classList.toggle('active');
         }
     </script>
+
+    <!-- <script>
+        let abouteme = document.querySelector('.abouteme');
+        abouteme.onclick = function() {
+            sobremi.classList.toggle('active');
+            }
+    </script>
+
+    <script>
+        let xp = document.querySelector('.xp');
+        xp.onclick = function() {
+            curriculum.classList.toggle('active');
+            sobremi.classList.toggle(sobremi)
+            contacto.classList.toggle(contacto );
+            skills.classList.toggle(skills);
+        }
+    </script>
+
+    <script>
+        let edu = document.querySelector('.edu');
+        edu.onclick = function() {
+            curriculum.classList.toggle('active');
+        }
+    </script>
+    <script>
+        let contact = document.querySelector('.contact');
+        contact.onclick = function() {
+            contacto.classList.toggle('active');
+        }
+    </script>
+    <script>
+        let skilll = document.querySelector('.skilll');
+        skilll.onclick = function() {
+            skills.classList.toggle('active');
+        }
+    </script> -->
+
     <script src="script.js"></script>
 </body>
 </html>
