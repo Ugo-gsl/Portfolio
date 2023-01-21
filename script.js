@@ -28,7 +28,7 @@ function efectoHabilidades() {
 		habilidades[4].classList.add("drupal");
 		habilidades[5].classList.add("comunicacion");
 		habilidades[6].classList.add("trabajo");
-		habilidades[7].classList.add("creatividad");
+		habilidades[7].classList.add("dedicacion2");
 		habilidades[8].classList.add("dedicacion");
 		habilidades[9].classList.add("proyect");
 	}
@@ -37,6 +37,12 @@ function efectoHabilidades() {
 window.onscroll = function() {
 	efectoHabilidades();
 }
+
+
+
+
+
+
 let popup = document.querySelector('.island-popup');
 popup.onclick = function() {
 	popup.classList.toggle('active');
