@@ -21,7 +21,7 @@ ul{
     flex-direction: row;
     flex-wrap: wrap;
     background: none;
-    justify-content: space-around; 
+    justify-content: space-around;
 }
 
 .box{
@@ -118,7 +118,20 @@ ul{
   border-radius: 45px;
   opacity: 0.6;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+.fa-house{
+    font-size: 300%;
+    color: #fff;
+}
+
+a{
+    text-decoration: none;
+}
+
+
 .swiper{
     position: absolute;
     top: 8%;
@@ -160,7 +173,6 @@ i.fa_viber{
     justify-content: center;
     margin: 8px;
     font-size: 50px;
-
     align-items: center;
 }
 
@@ -168,6 +180,8 @@ i.abouteme {
     background-color: dodgerblue;
     width: 325px;
     height: 145px;
+    justify-content: none;
+
 }
 
 i.map{
@@ -192,7 +206,6 @@ i.skilll{
 iframe {
     border-radius: 15px;
 }
-
 
 
 
@@ -264,7 +277,6 @@ iframe {
     right: -15px;
     font-size: 14px;
 }
-/* Estas clases se agregaran dinamicamente mediante javascript */
 .skills .skill .javascript{
     width: 0%;
     animation: 2s javascript forwards;
@@ -384,11 +396,10 @@ iframe {
     margin: auto;
 }
 .curriculum h2{
-    font-size: 48px;
-    font-family: 'Righteous';
+    font-size: 38px;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
     padding: 20px 0;
-
 }
 .curriculum .fila{
     display: flex;
@@ -398,22 +409,18 @@ iframe {
     width: 49%;
     padding: 0 20px;
 }
-.curriculum .fila .col h3{
-    font-size: 28px;
-    font-family: 'Righteous';
+.curriculum h3{
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
     margin-bottom: 25px;
 }
-.curriculum .fila .izquierda{
-    border-right: 2px solid #252A2E;
-}
-.curriculum .fila .derecha{
-    border-left: 2px solid #252A2E;
-}
+
 .curriculum .fila .item{
     padding: 25px;
     margin-bottom: 30px;
     background-color: #252A2E;
     position: relative;
+    border-radius: 30px;
 }
 .curriculum .fila .item h4{
     font-size: 20px;
@@ -494,11 +501,10 @@ iframe {
     margin: auto;
 }
 .curriculum2 h2{
-    font-size: 48px;
-    font-family: 'Righteous';
+    font-size: 38px;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
     padding: 20px 0;
-
 }
 .curriculum2 .fila{
     display: flex;
@@ -508,22 +514,18 @@ iframe {
     width: 49%;
     padding: 0 20px;
 }
-.curriculum2 .fila .col h3{
-    font-size: 28px;
-    font-family: 'Righteous';
+.curriculum2 h3{
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
     margin-bottom: 25px;
 }
-.curriculum2 .fila .izquierda{
-    border-right: 2px solid #252A2E;
-}
-.curriculum2 .fila .derecha{
-    border-left: 2px solid #252A2E;
-}
+
 .curriculum2 .fila .item{
     padding: 25px;
     margin-bottom: 30px;
     background-color: #252A2E;
     position: relative;
+    border-radius: 30px;
 }
 .curriculum2 .fila .item h4{
     font-size: 20px;
@@ -603,26 +605,30 @@ iframe {
     display: none;
 }
 .contacto.active{
-    color: #fff;
     display: block;
     transition: 500s;
+    height: 100%;
+    width: 100%;
 }
 .contacto .contenido-seccion{
     max-width: 1100px;
     margin: auto;
+    height: 100%;
 }
 .contacto h2{
     font-size: 48px;
-    font-family: 'Righteous';
+    font-family: 'Poppins', sans-serif;
     text-align: center;
     padding: 20px 0;
     color: #fff;
 }
 .contacto .fila{
     display: flex;
+    height: 80%;
 }
 .contacto .col{
     width: 50%;
+    height: 100%;
     padding: 10px;
     position: relative;
 }
@@ -668,20 +674,29 @@ iframe {
 .contacto .col .info{
     position: absolute;
     top: 40%;
-    background-color: #252A2E;
     padding: 20px;
-    max-width: 350px;
+    max-width: 400px;
     left: 50%;
+    background-color: #313131;
     transform: translate(-50%, -50%);
+    border-radius: 30px;
+    height: 30%;
+    width: 80%;
 }
 .contacto .col .info ul{
     list-style: none;
+    color: #f5f5f5;
+    height: 100%;
+    flex-wrap: unset;
+    flex-direction: column;
+    
 }
 .contacto .col .info ul li{
     margin-bottom: 20px;
+    height: 10px;
 }
 .contacto .col .info ul li i{
-    color: #1CB698;
+    color: #000;
     display: inline-block;
     margin-right: 20px;
 }
@@ -820,10 +835,9 @@ footer .arriba{
 }
 .sobremi h2{
     font-size: 48px;
-    font-family: 'Righteous';
+    font-family: 'Poppins', sans-serif;
     text-align: center;
     padding: 20px 0;
-
 }
 .sobremi .contenido-seccion p{
     font: 18px;
@@ -927,6 +941,32 @@ li{
     color: #fff;
     padding: 50px 20px;
     display: block;
+    height: 100%;
+    width: 100%;
 }
 
 
+
+.title-block{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title-block h2 {
+    color: #f5f5f5;
+    font-size: 60px;
+    line-height: 74px;
+    margin: 0;
+}
+
+.title-block .sp-subtitle {
+    color: #aaa;
+    font-size: 21px;
+    font-weight: 300;
+    margin: 5px 0;
+    text-align: center;
+}
