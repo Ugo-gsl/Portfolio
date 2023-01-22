@@ -46,6 +46,9 @@ window.onscroll = function() {
 let popup = document.querySelector('.island-popup');
 popup.onclick = function() {
 	popup.classList.toggle('active');
+	setTimeout(function() {
+    	document.getElementById("text-isl").style.display = "flex";
+	}, 2000);
 }
 let sobremi = document.querySelector('.sobremi');
 let about = document.querySelector('.abouteme');

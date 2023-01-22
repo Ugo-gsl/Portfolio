@@ -84,10 +84,20 @@ ul{
     background: #000;
     transition: 0.5s ease-in-out;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    font-size: 5px;
 }
-
+.island-popup p {
+    display: none;
+    
+}
+.island-popup.active p {
+    color: #0f0f0f;
+    display: flex;
+    
+}
 .island-popup.active{
     width: 312.5px;
     height: 187.5px;
@@ -104,9 +114,7 @@ ul{
     border-radius: 62.5px;
     right: 5%;
 }
-.text.active{
-    background: red;
-}
+
 .program-bottom{
   position: absolute;
   bottom: 2%;
@@ -173,14 +181,25 @@ i.fa_viber{
     margin: 8px;
     font-size: 50px;
     align-items: center;
+    flex-wrap: nowrap;
 }
 
 i.abouteme {
-    background-color: dodgerblue;
+    background-color: rgb(21, 104, 172);
     width: 325px;
     height: 145px;
     justify-content: none;
-
+}
+.swiper  .abouteme i{
+    display: flex;
+    font-size: 80px;
+    width: 100%;
+    justify-content: center;
+}
+.swiper  .abouteme i.me {
+ font-family: 'Poppins', sans-serif;
+ font-style: normal;
+ font-size: 45px;
 }
 
 i.map{
@@ -192,13 +211,13 @@ i.xp{
     background-color: red;
 }
 i.edu{
-    background-color: cornflowerblue;    
+    background-color: orange;    
 }
 i.contact{
-    background-color: orange;
+    background-color: cornflowerblue;
 }
 i.skilll{
-    background-color: mediumslateblue;
+    background-color: rgba(170, 170, 170, 0.788);
     width: 325px;
     height: 145px;
 }
@@ -219,27 +238,54 @@ iframe {
 .skills.active{
     color: #fff;
     padding: 50px 20px;
-    display:block;
-
+    display:flex;
+    width: 100%;
+    height: 100%;
 }
 .skills .contenido-seccion{
     max-width: 1100px;
-    margin: auto;
+    /* margin: auto; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-between;
 }
 .skills h2{
     font-size: 48px;
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    padding: 20px 0;
-
+    padding-bottom: 20px ;
 }
 .skills .fila{
     display: flex;
+    width: 100%;
+    height: 80%;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: center;
 }
 .skills .fila .col{
-    width: 50%;
+    width: 49%;
+    height: 80%;
     padding: 0 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
 }
+.skills .col {
+
+    padding: 10px;
+    position: relative;
+    display: flex;
+    background-color: #313131;
+    border-radius: 30px;
+}
+
+
 .skills .fila .col h3{
     font-size: 28px;
     font-family: 'Poppins', sans-serif;
@@ -282,7 +328,7 @@ iframe {
 }
 @keyframes javascript {
     0%{width: 0%;}
-    100%{width: 75%;}
+    100%{width: 70%;}
 }
 
 .skills .skill .htmlcss{
@@ -291,7 +337,7 @@ iframe {
 }
 @keyframes htmlcss {
     0%{width: 0%;}
-    100%{width: 89%;}
+    100%{width: 100%;}
 }
 
 .skills .skill .photoshop{
@@ -300,7 +346,7 @@ iframe {
 }
 @keyframes photoshop {
     0%{width: 0%;}
-    100%{width: 95%;}
+    100%{width: 65%;}
 }
 
 .skills .skill .wordpress{
@@ -309,16 +355,7 @@ iframe {
 }
 @keyframes wordpress {
     0%{width: 0%;}
-    100%{width: 81%;}
-}
-
-.skills .skill .drupal{
-    width: 0%;
-    animation: 2s drupal forwards;
-}
-@keyframes drupal {
-    0%{width: 0%;}
-    100%{width: 55%;}
+    100%{width: 75%;}
 }
 
 .skills .skill .comunicacion{
@@ -327,7 +364,7 @@ iframe {
 }
 @keyframes comunicacion {
     0%{width: 0%;}
-    100%{width: 80%;}
+    100%{width: 50%;}
 }
 
 .skills .skill .trabajo{
@@ -336,18 +373,7 @@ iframe {
 }
 @keyframes trabajo {
     0%{width: 0%;}
-    100%{width: 70%;}
-}
-
-.skills .skill .crea{
-    width: 0%;
-    animation: 2s crea forwards;
-    display: unset !important;
-}
-
-@keyframes crea {
-    0%{width: 0%;}
-    100%{width: 100%;}
+    100%{width: 60%;}
 }
 
 .skills .skill .dedicacion{
@@ -356,7 +382,7 @@ iframe {
 }
 @keyframes dedicacion {
     0%{width: 0%;}
-    100%{width: 65%;}
+    100%{width: 85%;}
 }
 
 .skills .skill .proyect{
@@ -365,7 +391,7 @@ iframe {
 }
 @keyframes proyect {
     0%{width: 0%;}
-    100%{width: 60%;}
+    100%{width: 80%;}
 }
 
 
@@ -826,25 +852,27 @@ footer .arriba{
 
 .sobremi{
     color: #fff;
-    padding: 50px 20px;
     display: none;
 }
 .sobremi.active{
     color: #fff;
-    padding: 50px 20px;
     display: block;
+    height: 100%;
+    width: 100%;
 }
 
 
 .sobremi .contenido-seccion{
     padding: 20px;
     width: 100%;
+    height: 100%;
 }
 .sobremi h2{
     font-size: 48px;
     font-family: 'Poppins', sans-serif;
     text-align: center;
     padding: 20px 0;
+    margin-top: 10px;
 }
 .sobremi .contenido-seccion p{
     font: 18px;
@@ -859,20 +887,37 @@ footer .arriba{
 .sobremi .fila{
     display: flex;
     width: 100%;
-    justify-content: center;
+    height: 80%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: center;
 }
-.sobremi .fila .col
-{
-    width: 50%;
+
+.sobremi .col {
+    width: 48%;
+    height: 80%;
+    padding: 10px;
+    position: relative;
     display: flex;
-    flex-direction: column;
+    background-color: #313131;
+    border-radius: 30px;
+}
+.sobremi .col.left{
     align-items: center;
 }
+.sobremi .col.right{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+
 .sobremi .fila .col h3{
     font-size: 28px;
     font-family: 'Poppins', sans-serif;
     margin-bottom: 25px;
-    margin-top: 50px;
+    margin-top: 0px;
     text-align: center;
 }
 .sobremi .fila .col ul{
