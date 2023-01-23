@@ -436,6 +436,7 @@ iframe {
     padding: 0 20px;
 }
 .curriculum h3{
+    margin-left: 35px;
     font-size: 25px;
     font-family: 'Poppins', sans-serif;
     margin-bottom: 25px;
@@ -548,6 +549,7 @@ iframe {
 .curriculum2 h3{
     font-size: 25px;
     font-family: 'Poppins', sans-serif;
+    margin-left: 35px;
     margin-bottom: 35px;
 }
 
@@ -836,6 +838,18 @@ footer .arriba{
         width: 100%;
     }
 }
+@media screen and (max-width:1260px){
+    .box{
+        display: none;
+    }
+    .text{
+        width: 90%;
+        height: 90%;
+    }
+    .fa-bars{
+        display: block !important;
+    }
+}
 
 
 
@@ -843,6 +857,24 @@ footer .arriba{
 
 
 
+.fa-bars{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 50px;
+    color: white;
+    display: none;
+}
+.menu-ptt{
+    display: none;
+    width: 90%;
+    height: 90%;
+    background-color: rgb(255, 0, 0);
+}
+.menu-ptt.active{
+    display: block;
+
+}
 
 
 

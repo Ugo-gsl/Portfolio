@@ -46,43 +46,51 @@ window.onscroll = function() {
 let popup = document.querySelector('.island-popup');
 popup.onclick = function() {
 	popup.classList.toggle('active');
-	setTimeout(function() {
-    	document.getElementById("text-isl").style.display = "flex";
-	}, 2000);
+}
+let menu2 = document.querySelector('.menu-ptt')
+let menu = document.querySelector('.fa-bars');
+menu.onclick = function() {
+	menu2.classList.add('active');
 }
 let sobremi = document.querySelector('.sobremi');
 let about = document.querySelector('.abouteme');
 about.onclick = function() {
 	$('.active').removeClass('active');;
 	sobremi.classList.add('active');
+	fa-bars.removeClass('active');
 }
 let skill = document.querySelector('.skills');
 let skillbuton = document.querySelector('.skilll');
 skillbuton.onclick = function() {
 	$('.active').removeClass('active');;
 	skill.classList.add('active');
+	fa-bars.removeClass('active');
 }
 let contact = document.querySelector('.contacto');
 let contactbuton = document.querySelector('.contact');
 contactbuton.onclick = function() {
 	$('.active').removeClass('active');;
 	contact.classList.add('active');
+	fa-bars.removeClass('active');
 }
 let xp = document.querySelector('.curriculum');
 let xpbuton = document.querySelector('.xp');
 xpbuton.onclick = function() {
 	$('.active').removeClass('active');;
 	xp.classList.add('active');
+	fa-bars.removeClass('active');
 }
 let edu = document.querySelector('.curriculum2');
 let edubuton = document.querySelector('.edu');
 edubuton.onclick = function() {
 	$('.active').removeClass('active');;
 	edu.classList.add('active');
+	fa-bars.removeClass('active');
 }
 let home = document.querySelector('.homee');
 let homebuton = document.querySelector('.program-bottom');
 homebuton.onclick = function() {
 	$('.active').removeClass('active');;
 	home.classList.add('active');
+	fa-bars.removeClass('active');
 }
