@@ -966,6 +966,9 @@ footer .arriba{
     .erreur{
         display: flex !important;
         position: absolute;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 @media screen and (max-height: 375px){
@@ -978,16 +981,18 @@ footer .arriba{
     .erreur{
         display: flex !important;
         position: absolute;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     
 }
 
 .erreur{
     display: none;
-    top: 50%;
-    left: 50%;
+    height: 100%;
+    width: 100%;
     color: #fff;
-    transform:translateX(-50%);
     font-size: 20px;
 }
 
