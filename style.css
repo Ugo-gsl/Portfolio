@@ -845,9 +845,10 @@ footer .arriba{
     .text{
         width: 90%;
         height: 90%;
+        display: none;
     }
     .fa-bars{
-        display:unset;
+        display:block !important;
         }
 }
 
@@ -864,16 +865,6 @@ footer .arriba{
     font-size: 50px;
     color: white;
     display: none;
-}
-.menu-ptt{
-    display: none;
-    width: 90%;
-    height: 90%;
-    background-color: rgb(255, 0, 0);
-}
-.menu-ptt.active{
-    display: block;
-
 }
 
 
