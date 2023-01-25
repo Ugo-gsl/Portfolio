@@ -129,10 +129,7 @@ ul{
   align-items: center;
   justify-content: center;
 }
-.fa-house{
-    font-size: 300%;
-    color: #fff;
-}
+
 
 a{
     text-decoration: none;
@@ -183,7 +180,7 @@ i.fa_viber{
     border-radius: 15px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     margin: 8px;
     font-size: 50px;
     align-items: center;
