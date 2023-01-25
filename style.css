@@ -14,7 +14,10 @@ body {
     min-height: 100vh;
     width: 100vh;
     justify-content: center;
+<<<<<<< HEAD
     flex-direction: column;
+=======
+>>>>>>> f01a55393d0af5cb42f8cae341dbc2e6d5a0ca6e
     
 }
 ul{
