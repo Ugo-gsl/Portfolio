@@ -981,10 +981,12 @@ footer .arriba{
 }
 @media screen and (max-height: 375px){
     .box {
-        display: block;
+        zoom: 80% ;
+        right: 0%;
     }
     .text{
-        display: block;
+        zoom: 80% ;
+        left: 500px;
     }
     /* .erreur{
         display: flex !important;
