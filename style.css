@@ -956,20 +956,24 @@ footer .arriba{
     .box {
         zoom: 60% ;
         left: 2%;
+
     }
     .text{
-        zoom: 60% ;
-        right: 2%;
+        zoom: 80% ;
+        left: 600px;
+        
     }
 }
 @media screen and (max-width: 700px){
     .box {
-        zoom: 80% ;
+        zoom: 60% ;
         right: 0%;
+
     }
     .text{
-        zoom: 80% ;
-        left: 500px;
+        zoom: 60% ;
+        left: 600px;
+
     }
     /* .erreur{
         display: flex !important;
