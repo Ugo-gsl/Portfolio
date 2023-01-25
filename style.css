@@ -11,10 +11,11 @@ html{
 }
 body{
     display: flex;
+    align-items: center;
     min-height: 100vh;
     width: 100vh;
-    flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
 }
 ul{
     width: 100%;
@@ -213,9 +214,7 @@ i.map{
     width: 150px;
     height: 150px;
 }
-.map2{
-    border-radius: 15px;
-}
+
 i.xp{
     background-color: red;
 }
