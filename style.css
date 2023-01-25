@@ -967,7 +967,7 @@ footer .arriba{
         display: block;
     }
     .text{
-        display: none;
+        display: block;
     }
     /* .erreur{
         display: flex !important;
@@ -982,7 +982,7 @@ footer .arriba{
         display: block;
     }
     .text{
-        display: none;
+        display: block;
     }
     /* .erreur{
         display: flex !important;
