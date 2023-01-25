@@ -14,6 +14,8 @@ body{
     align-items: center;
     min-height: 100vh;
     width: 100vh;
+    flex-wrap: wrap;
+    align-content: flex-start;
 }
 ul{
     width: 100%;
@@ -981,7 +983,7 @@ footer .arriba{
     }
     .text{
         zoom: 60% ;
-        left: 600px;
+        left: 0%;
 
     }
     .curriculum .fila {
@@ -1009,12 +1011,12 @@ footer .arriba{
 @media screen and (max-height: 375px){
     .box {
         zoom: 60% ;
-        right: 0%;
+        left: 0%;
 
     }
     .text{
         zoom: 60% ;
-        left: 600px;
+        left: 0%;
 
     }
     .curriculum .fila {
