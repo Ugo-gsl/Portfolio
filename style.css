@@ -674,8 +674,10 @@ iframe {
     padding: 10px;
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 .contacto .col input, .contacto .col textarea{
     display: block;
@@ -1037,8 +1039,9 @@ footer .arriba{
     .contacto .fila{
         display: flex;
         flex-direction: row;
-        align-items: center;
         width: 100%;
+        flex-wrap: nowrap;
+        align-items: center;
     }
     .contacto .col .info {
         height: auto;
