@@ -30,7 +30,6 @@ ul{
     background: #666;
     border-radius: 62.5px;
     left: 5%;
-    
 }
 
 .inner{
@@ -207,6 +206,7 @@ i.map{
     width: 150px;
     height: 150px;
 }
+
 i.xp{
     background-color: red;
 }
@@ -430,6 +430,8 @@ iframe {
 .curriculum .fila{
     display: flex;
     justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
 }
 .curriculum .fila .col{
     width: 49%;
@@ -838,38 +840,161 @@ footer .arriba{
         width: 100%;
     }
 }
-@media screen and (max-width:1260px){
-    .box{
+
+@media screen and (max-width: 1260px) and (max-height: 760px) {
+    .box {
+        zoom: 70% !important;
+        left: 2%!important;
+    }
+    .text{
+        zoom: 70%!important;
+        right: 2%!important;
+    }
+}
+@media screen and (max-width: 1030px) and (max-height: 630px) {
+    .box {
+        zoom: 50% !important;
+        left: 4%!important;
+    }
+    .text{
+        zoom: 50%!important;
+        right: 4%!important;
+    }
+}
+@media screen and (max-width: 1430px) and (max-height: 560px) {
+    .box {
+        zoom: 50% !important;
+        left: 4%!important;
+    }
+    .text{
+        zoom: 50%!important;
+        right: 4%!important;
+    }
+}
+@media screen and (max-width: 1540px){
+    .curriculum .fila {
+        zoom:90%;
+    }
+}
+@media screen and (max-width: 1260px){
+    .box {
+        zoom: 90%;
+        left: 2%;
+    }
+    .text{
+        zoom: 90%;
+        right: 2%;
+    }
+}
+@media screen and (max-width: 1066px){
+    .curriculum .fila {
+        zoom:85%;
+    }
+}
+@media screen and (max-width: 950px){
+    .curriculum .fila {
+        zoom:80%;
+    }
+}
+@media screen and (max-height: 760px){
+    .box {
+        zoom: 80%;
+        left: 10%;
+    }
+    .text{
+        zoom: 80%;
+        right: 10%;
+    }
+}
+@media screen and (max-height: 612px){
+    .box {
+        zoom: 70%;
+        left: 15%;
+    }
+    .text{
+        zoom: 70%;
+        right: 15%;
+    }
+}
+@media screen and (max-height: 530px){
+    .box {
+        zoom: 50% !important;
+        left: 15%;
+    }
+    .text{
+        zoom: 50% !important;
+        right: 15%;
+    }
+}
+@media screen and (max-width: 955px){
+    .box {
+        zoom: 80% ;
+        left: 2%;
+    }
+    .text{
+        zoom: 80% ;
+        right: 2%;
+    }
+}
+@media screen and (max-width: 870px){
+    .box {
+        zoom: 70% ;
+        left: 2%;
+    }
+    .text{
+        zoom: 70% ;
+        right: 2%;
+    }
+}
+@media screen and (max-width: 770px){
+    .box {
+        zoom: 60% ;
+        left: 2%;
+    }
+    .text{
+        zoom: 60% ;
+        right: 2%;
+    }
+}
+@media screen and (max-width: 700px){
+    .box {
         display: none;
     }
     .text{
-        width: 90%;
-        height: 90%;
         display: none;
     }
-    .fa-bars{
-        display:block !important;
-        }
+    .erreur{
+        display: flex !important;
+        position: absolute;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (max-height: 375px){
+    .box {
+        display: none;
+    }
+    .text{
+        display: none;
+    }
+    .erreur{
+        display: flex !important;
+        position: absolute;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
 }
 
-
-
-
-
-
-
-.fa-bars{
-    position: absolute;
-    top: 5%;
-    right: 5%;
-    font-size: 50px;
-    color: white;
+.erreur{
     display: none;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    font-size: 20px;
 }
-
-
-
-
 
 
 .sobremi{
