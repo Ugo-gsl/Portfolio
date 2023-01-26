@@ -36,7 +36,7 @@ ul{
 .inner{
     position: absolute;
     inset: 3px;
-    background: url(img/bg.webp);
+    background: url(https://raw.githubusercontent.com/Ugo-gsl/img/main/bg.webp);
     background-position: center;
     background-size: cover;
     border-radius: 60px;
