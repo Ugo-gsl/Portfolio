@@ -11,10 +11,10 @@ html{
 }
 body {
     display: flex;
+    min-height: 100vh;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
-    min-height: 100vh;
-    width: 100vh;
 }
 ul{
     width: 100%;
@@ -227,6 +227,12 @@ i.skilll{
 }
 iframe {
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -1285,6 +1291,7 @@ li{
     list-style: none;
 }
 
+
 .homee{
     color: #fff;
     padding: 50px 20px;
@@ -1296,6 +1303,8 @@ li{
     display: block;
     height: 100%;
     width: 100%;
+    border-color: none;
+    border-radius: 50px;
 }
 
 

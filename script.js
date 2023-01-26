@@ -1,4 +1,4 @@
-let menuVisible = false;
+var menuVisible = false;
 //Función que oculta o muestra el menu
 function mostrarOcultarMenu() {
 	if (menuVisible) {
@@ -20,7 +20,7 @@ function efectoHabilidades() {
 	var skills = document.getElementById("skills");
 	var distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
 	if (distancia_skills >= 300) {
-		let habilidades = document.getElementsByClassName("progreso");
+		var habilidades = document.getElementsByClassName("progreso");
 		habilidades[0].classList.add("javascript");
 		habilidades[1].classList.add("htmlcss");
 		habilidades[2].classList.add("photoshop");
@@ -43,44 +43,76 @@ window.onscroll = function() {
 
 
 
-let popup = document.querySelector('.island-popup');
+var popup = document.getElementById("island-popup");
 popup.onclick = function() {
 	popup.classList.toggle('active');
 }
-let sobremi = document.querySelector('.sobremi');
-let about = document.querySelector('.abouteme');
-about.onclick = function() {
-	$('.active').removeClass('active');;
-	sobremi.classList.add('active');
-	}
-let skill = document.querySelector('.skills');
-let skillbuton = document.querySelector('.skilll');
-skillbuton.onclick = function() {
-	$('.active').removeClass('active');;
-	skill.classList.add('active');
-	}
-let contact = document.querySelector('.contacto');
-let contactbuton = document.querySelector('.contact');
-contactbuton.onclick = function() {
-	$('.active').removeClass('active');;
-	contact.classList.add('active');
-	}
-let xp = document.querySelector('.curriculum');
-let xpbuton = document.querySelector('.xp');
-xpbuton.onclick = function() {
-	$('.active').removeClass('active');;
-	xp.classList.add('active');
-	}
-let edu = document.querySelector('.curriculum2');
-let edubuton = document.querySelector('.edu');
-edubuton.onclick = function() {
-	$('.active').removeClass('active');;
-	edu.classList.add('active');
-	}
-let home = document.querySelector('.homee');
-let homebuton = document.querySelector('.program-bottom');
-homebuton.onclick = function() {
-	$('.active').removeClass('active');;
-	home.classList.add('active');
-	}
+
+document.querySelectorAll('.abouteme').forEach(button => {
+    button.addEventListener('click', function() {
+        const activeSection = document.querySelector('.active');
+        if (activeSection) {
+            activeSection.classList.remove('active');
+        }
+        const currentSection = document.getElementById('sobremi');
+        currentSection.classList.add('active');
+    });
+});
+
+document.querySelectorAll('.skilll').forEach(button => {
+    button.addEventListener('click', function() {
+        const activeSection = document.querySelector('.active');
+        if (activeSection) {
+            activeSection.classList.remove('active');
+        }
+        const currentSection = document.getElementById('skills');
+        currentSection.classList.add('active');
+    });
+});
+
+document.querySelectorAll('.contact').forEach(button => {
+    button.addEventListener('click', function() {
+        const activeSection = document.querySelector('.active');
+        if (activeSection) {
+            activeSection.classList.remove('active');
+        }
+        const currentSection = document.getElementById('contacto');
+        currentSection.classList.add('active');
+    });
+});
+
+document.querySelectorAll('.xp').forEach(button => {
+    button.addEventListener('click', function() {
+        const activeSection = document.querySelector('.active');
+        if (activeSection) {
+            activeSection.classList.remove('active');
+        }
+        const currentSection = document.getElementById('curriculum');
+        currentSection.classList.add('active');
+    });
+});
+
+document.querySelectorAll('.edu').forEach(button => {
+    button.addEventListener('click', function() {
+        const activeSection = document.querySelector('.active');
+        if (activeSection) {
+            activeSection.classList.remove('active');
+        }
+        const currentSection = document.getElementById('curriculum2');
+        currentSection.classList.add('active');
+    });
+});
+
+document.querySelectorAll('.program-bottom').forEach(button => {
+    button.addEventListener('click', function() {
+        const activeSection = document.querySelector('.active');
+        if (activeSection) {
+            activeSection.classList.remove('active');
+        }
+        const currentSection = document.getElementById('homee');
+        currentSection.classList.add('active');
+    });
+});
+
+
 
