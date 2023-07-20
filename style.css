@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2&display=swap');
+
 
 *{
     margin: 0;
@@ -524,8 +526,6 @@ iframe {
     position: relative;
     bottom: 4px;
 }
-
-
 
 .curriculum2{
     color: #fff;
