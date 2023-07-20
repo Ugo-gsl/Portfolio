@@ -485,7 +485,7 @@ iframe {
 .curriculum .fila .der{
     border-left: 2px solid #aaa;
     margin-left: 20px;
-    margin-top: 20px;
+    margin-top: 10%;
 }
 .curriculum .fila .item .conectori{
     height: 2px;
@@ -596,6 +596,7 @@ iframe {
 .curriculum2 .fila .der{
     border-left: 2px solid #aaa;
     margin-left: 20px;
+    margin-top: 10%;
 }
 .curriculum2 .fila .item .conectori{
     height: 2px;
