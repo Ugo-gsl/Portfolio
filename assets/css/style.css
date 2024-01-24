@@ -434,7 +434,13 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
-
+.img-fluid{
+  height: 30vh;
+}
+.col-lg-4 {
+  display: flex;
+  justify-content: center;
+}
 .col-lg-8 {
   display: flex;
   flex-direction: column;
