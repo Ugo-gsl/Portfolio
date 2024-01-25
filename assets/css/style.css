@@ -9,6 +9,38 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+/* Barre de défilement verticale */
+::-webkit-scrollbar {
+  width: 12px; /* Largeur de la barre de défilement */
+}
+
+/* Curseur de la barre de défilement */
+::-webkit-scrollbar-thumb {
+  background-color: #0563bb; /* Couleur du curseur */
+  border-radius: 6px; /* Coins arrondis */
+}
+
+/* Zone de suivi de la barre de défilement (à gauche du curseur) */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Couleur de la zone de suivi */
+}
+
+/* Barre de défilement horizontale (si nécessaire) */
+::-webkit-scrollbar-horizontal {
+  height: 12px; /* Hauteur de la barre de défilement horizontale */
+}
+
+/* Curseur de la barre de défilement horizontale (si nécessaire) */
+::-webkit-scrollbar-thumb:horizontal {
+  background-color: #007acc; /* Couleur du curseur horizontal */
+}
+
+/* Zone de suivi de la barre de défilement horizontale (si nécessaire) */
+::-webkit-scrollbar-track:horizontal {
+  background-color: #f1f1f1; /* Couleur de la zone de suivi horizontale */
+}
+
+
 html{
   caret-color: transparent;
 }
