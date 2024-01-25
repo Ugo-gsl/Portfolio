@@ -132,7 +132,7 @@ h6 {
   transition: all 0.5s;
   padding: 30px;
   overflow-y: auto;
-  background-color: #f7f8f977!important; 
+  background-color: #f7f8f9!important; 
 }
 
 @media (max-width: 991px) {
@@ -182,7 +182,7 @@ h6 {
   transition: 0.3s;
   font-size: 15px;
   border-radius: 50px;
-  background: #f2f3f5;
+  background: #cacaca;
   height: 56px;
   width: 100%;
   overflow: hidden;
