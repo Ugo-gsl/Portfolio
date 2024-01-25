@@ -326,8 +326,9 @@ h6 {
   align-items: center;
 }
 .masthead-avatar {
-    width: 15rem;
-    margin: 3rem !important;
+    width: 40vw;
+    height: auto;
+    margin: 2rem !important;
 }
 
 @media (min-width: 992px) {
