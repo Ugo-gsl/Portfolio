@@ -418,8 +418,8 @@ section {
   overflow: hidden;
   height: 100vh;
   display: flex;
-  justify-content: start;
   flex-direction: column;
+  justify-content: center;
 }
 
 
