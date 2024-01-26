@@ -323,11 +323,38 @@ h6 {
   flex-wrap: wrap;
 
 }
+
 .container
 {
   flex-wrap: wrap;
   align-items: center;
 }
+
+.new{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+.new h1{
+  margin: 0;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #45505b;
+  justify-content: center;
+  display: flex;
+  padding: 3%;
+  text-align: center;
+}
+
+.new p{
+  line-height: 24px;
+  font-size: 14px;
+  text-align: center;
+}
+
 .masthead-avatar {
     width: 20vw;
     height: auto;
