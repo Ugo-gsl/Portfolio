@@ -484,8 +484,6 @@ section {
 .col-lg-4 {
   display: flex;
   justify-content: center;
-  width: 100%!important;
-  height: 100%!important;
 }
 .col-lg-8 {
   display: flex;
