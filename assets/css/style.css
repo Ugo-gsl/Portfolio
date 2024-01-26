@@ -992,6 +992,32 @@ section {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+@media (max-width: 800px) {
+  .contact {
+    display: flex!important;
+    align-items: center!important;
+    flex-direction: column!important;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    height: auto!important;
+  }
+  .section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #45505b;
+    padding-top: 20px;
+  }
+  .section-title {
+    text-align: center;
+    padding-top: 30px;
+  }
+
+}
+
 .systhese {
   display: flex;
   flex-direction: column;
@@ -1005,7 +1031,9 @@ section {
 }
 
 .contact img{
-  margin: 4vh;
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+  width: 40vh;
 }
 
 .pdf{
