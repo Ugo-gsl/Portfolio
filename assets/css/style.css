@@ -629,6 +629,22 @@ section {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
+.box-img{
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 26px;
+  color: #728394;
+}    
+
+.box-img h2{
+  padding-top: 5%;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0;
+}
+
 .img-veille{
   display: flex;
   justify-content: space-around;
