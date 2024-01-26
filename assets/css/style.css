@@ -634,9 +634,9 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
-  font-size: 26px;
-  color: #728394;
+  background-color: #f7f8f9;
+  border-radius: 40px;
+  margin: 20px;
 }    
 
 .box-img h2{
@@ -1041,6 +1041,10 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #f7f8f9;
+  border-radius: 50px;
+  margin-right: 5vw;
+  margin-left: 5vw;
 }
 
 .contact {
@@ -1053,6 +1057,7 @@ section {
   margin-top: 4vh;
   margin-bottom: 4vh;
   width: 40vh;
+  height: 55vh;
 }
 
 .pdf{
@@ -1062,6 +1067,7 @@ section {
   color: #fff;
   transition: 0.4s;
   border-radius: 50px;
+  margin-bottom: 4vh;
 }
 
 .contact .info {
