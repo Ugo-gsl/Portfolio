@@ -653,9 +653,25 @@ section {
   border: 2px solid #0563bb;
 }
 
+li{
+  margin-bottom: 10px;
+}
+
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
+.cyb{
+  justify-content: flex-start!important;
+}
+.new-cyb{
+  height:auto;
+}
+
+.h22{
+  text-align: left!important;
+  display: flex;
+  padding-top: 20px;
+}
 .box-img{
   flex-direction: column;
   display: flex;
