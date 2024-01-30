@@ -321,7 +321,21 @@ h6 {
   position: relative;
   align-items: center;
   flex-wrap: wrap;
+}
 
+.slide1{
+  display: flex;
+  align-items: center;
+  margin: 50px;
+  justify-content: space-around;
+}
+
+.slide{
+  width: 45%;
+}
+.slide img{
+  width: 100%;
+  height: auto;
 }
 
 .container
