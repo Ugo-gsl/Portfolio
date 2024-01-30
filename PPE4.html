@@ -37,18 +37,27 @@
     </nav>
   </header>
   <section>
-    <div class="container new">
+    <div class="container new section-title">
       <h1>Serveur PXE</h1>
-      <p>Ce projet montre une maîtrise avancée dans la configuration des serveurs, la personnalisation d'images système et l'automatisation des processus d'installation. Il met en lumière votre compréhension des enjeux de déploiement à grande échelle et de la gestion de l'infrastructure réseau.</p>    
+      <h2></h2>
     </div>
-  </section>
+    <div class="container new">
+        <p>Le boot PXE pour Preboot Execution Environment est un protocole de démarrage réseau qui permet à un ordinateur local de démarrer à partir de données situées sur un serveur distant, plutôt que de démarrer à partir du contenu de la clé USB.</p>    
+        <p>Si l'on a besoin d'installer Windows 11 sur 20 machines différentes, plutôt que d'utiliser 20 clés USB ou de faire les machines une par une si l'on a qu'une seule clé USB, on va effectuer un boot PXE sur chaque machine et elles vont récupérer les sources d'installation depuis notre serveur.</p>
+    </div>
+    <div class="container" style="display: flex;justify-content: space-around;margin-top: 40px;">
+      <img src="assets/img/Schema-Deploiement-par-cle-USB.png" alt="" width="40%" height="auto">
+      <img src="assets/img/Schema-Deploiement-par-boot-PXE.png" alt="" width="40%" height="auto">
+    </div>
+    </section>
+    <section>
+    </section>
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
       <h3>Gastel Ugo</h3>
-      <p>
-        "En matière de sécurité informatique, il ne s'agit pas de savoir si on va être attaqué, mais quand." – Robert Muelle</p>
+      <p>"En matière de sécurité informatique, il ne s'agit pas de savoir si on va être attaqué, mais quand." – Robert Muelle</p>
       <div class="social-links">
         <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
       </div>

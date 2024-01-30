@@ -331,10 +331,11 @@ h6 {
 }
 
 .new{
-  height: 100%;
   display: flex;
-  justify-content: center;
-  align-content: flex-start;
+  flex-direction: column;
+}
+.container .new p{
+  background-color: #f7f8f9;
 }
 
 .new h1{
@@ -353,6 +354,8 @@ h6 {
   line-height: 24px;
   font-size: 14px;
   text-align: center;
+  background-color: #f7f8f9;
+  border-radius: 10px;
 }
 
 .masthead-avatar {
@@ -1333,4 +1336,4 @@ li{
   /* Autres styles pour les boutons de flèche */
 }
 
-/*  */
+
