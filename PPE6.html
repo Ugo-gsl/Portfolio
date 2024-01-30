@@ -42,6 +42,94 @@
       <p>Ce projet combine des compétences en administration de serveurs, en déploiement d'applications et en gestion de contenu. Il est très pertinent dans le contexte actuel où la présence en ligne est cruciale pour les entreprises.</p>
     </div>
   </section>
+  <div class="container section-title"><h2>1. Objectifs</h2></div>
+    <div class="container">
+      <p>L'objectif est de pouvoir lancer les PC sans avoir besoin de booter sur la clef (Ce qui peut entrainer des modification dans le BIOS) en utilisant seulement le réseau et un cable Ethernet comme matériel de plus nous pourront lancer plusieur installation en même temps. </p>
+    </div>
+    <div class="container section-title"><h2>2. Déroulement</h2></div>
+    <div class="container">
+      <h3>1 - Installation du rôles WDS</h3>
+      <div class="slide1">
+        <div class="slide"><p>1.1 - Aller à la page d’ajout des rôles, cochez la case «Service de déploiement Windows».</p></div>
+        <div class="slide"><img src="assets/img/pxe/wds-5.png" alt=""></div>
+      </div>
+      <div class="slide1">
+        <div class="slide"><p>1.2 - A la demande d’ajout des fonctionnalités, cliquez le bouton « Ajouter des fonctionnalités ».</p></div>
+        <div class="slide"><img src="assets/img/pxe/wds-6.png" alt=""></div>
+      </div>
+      <div class="slide1">
+        <div class="slide"><p>1.3 - Laissez cocher les deux services de rôles associés à WDS.</p></div>
+        <div class="slide"><img src="assets/img/pxe/wds-8.png" alt=""></div>
+      </div>
+      <div class="slide1">
+        <div class="slide"><p>1.4 - Et pour terminer, vous pouvez cliquer sur Installer.</p></div>
+        <div class="slide"><img src="assets/img/pxe/wds-9.png" alt=""></div>
+      </div>
+
+      <h3>2 - Configuration et démarage du serveur WDS</h3>
+      <div class="slide1">
+        <div class="slide"><p>2.1 - Lancer le service de déploiement Windows.</p></div>
+        <div class="slide"><img src="assets/img/pxe/wds-10.png" alt=""></div>
+      </div>
+      <div class="slide1">
+        <div class="slide"><p>2.2 - Et puis cliquer sur "Configurer le serveur"</p></div>
+        <div class="slide"><img src="assets/img/pxe/wds-13.png" alt=""></div>
+      </div>
+      <div class="slide1">
+        <div class="slide"><p>2.3 - Et laissez tous par défaut mis a part l'"Options d'installation" ou il faut mettre dans mon cas "Intégré à Active Directory"</p></div>
+        <div class="slide"><img src="assets/img/pxe/wds-16.png" alt=""></div>
+      </div>
+      <div class="slide1">
+        <div class="slide"><p>2.4 - Puis le démarrer</p></div>
+        <div class="slide"><img src="assets/img/pxe/wds-22.png" alt=""></div>
+      </div>
+
+      <h3>3 - Image de démarrage et d'installation</h3>
+      <div class="slide1">
+        <div class="slide"><p>3.1 - Dans la console de gestion du service WDS, faites un clic droit sur le nœud « Images de démarrage » et cliquez sur « Ajouter une image de démarrage ».</p></div>
+        <div class="slide"><img src="assets/img/pxe/wds-28.png" alt=""></div>
+      </div>
+      <div class="slide1">
+        <div class="slide"><p>3.2 - Cliquez sur Parcourir et recherchez le fichier « boot.wim » qui est présent dans les fichier d'un ISO Windows puis choisir son nom</p></div>
+        <div class="slide"><img src="assets/img/pxe/wds-29.png" alt=""></div>
+      </div>
+      <div class="slide1">
+        <div class="slide"><p>3.3 - L’image de démarrage sera alors disponible dans la console de gestion de WDS.</p></div>
+        <div class="slide"><img src="assets/img/pxe/wds-34.png" alt=""></div>
+      </div>
+      <div class="slide1">
+        <div class="slide"><p>3.4 - Toujours dans la console de gestion de WDS, faites cette fois-ci un clic droit sur « Image d’installation » et cliquez sur « Ajouter une image d’installation ».</p></div>
+        <div class="slide"><img src="assets/img/pxe/wds-35.png" alt=""></div>
+      </div>
+      <div class="slide1">
+        <div class="slide"><p>3.5 - Il faut créer un groupe d’image pour stocker notre image d’installation puis recherchez le fichier d’installation .wim, après il faut choisir sa version puis son nom</p></div>
+        <div class="slide"><img src="assets/img/pxe/wds-37.png" alt=""></div>
+      </div>
+      <div class="slide1">
+        <div class="slide"><p>3.6 - Voila l'image dans le grouê et prêt a l'utilisation</p></div>
+        <div class="slide"><img src="assets/img/pxe/wds-42.png" alt=""></div>
+      </div>
+
+      <h3>4 - Test</h3>
+      <div class="slide1">
+        <div class="slide"><p>4.1 - Dès la mise sous tension, appuyez sur la touche F12 (la plupart du temps) puis selectionner LAN, PXE ou Network </p></div>
+        <div class="slide"><img src="assets/img/pxe/wds-43.png" alt=""></div>
+      </div>
+      <div class="slide1">
+        <div class="slide"><p>4.2 - La machine va se faire affecter un IP par le serveur DHCP puis grace a ça vas communiquer avec le serveur PXE</p></div>
+        <div class="slide"><img src="assets/img/pxe/wds-44.png" alt=""></div>
+      </div>
+      <div class="slide1">
+        <div class="slide"><p>4.3 - Le client va télécharger localement l’image de démarrage (boot.wim) depuis le serveur pour initier le lancement de l’installeur.</p></div>
+        <div class="slide"><img src="assets/img/pxe/wds-46.png" alt=""></div>
+      </div>
+      <div class="slide1">
+        <div class="slide"><p>4.4 - Une fois téléchargé, le programme d’installation de système d’exploitation va démarrer. Il reste plus qu'a faire un installation windows normal.</p></div>
+        <div class="slide"><img src="assets/img/pxe/wds-47.png" alt=""></div>
+      </div>
+      <h3>Conclusion</h3>
+      <p>En conclusion, l'implémentation d'un serveur PXE dans un environnement réseau est un choix stratégique qui offre une multitude d'avantages significatifs. Il simplifie grandement le déploiement et la gestion des systèmes d'exploitation sur un grand nombre de machines, permettant ainsi un gain de temps considérable et une réduction des coûts opérationnels. </p>
+    </div>
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
