@@ -1262,6 +1262,27 @@ li{
   }
 }
 
+code {
+  background-color: #f5f5f5; /* Couleur de fond gris clair */
+  border: 1px solid #ddd; /* Bordure légère */
+  color: #666; /* Couleur du texte */
+  font-family: monospace;
+  padding: 2px 4px; /* Un peu de padding autour du texte */
+  font-size: 90%; /* Légèrement plus petit que le texte environnant */
+  border-radius: 4px; /* Bordures arrondies pour un look moderne */
+}
+pre{
+  background-color: #f5f5f5; /* Couleur de fond gris clair */
+  border: 1px solid #ddd; /* Bordure légère */
+  color: #666; /* Couleur du texte */
+  font-family: monospace;
+  padding: 2px 4px; /* Un peu de padding autour du texte */
+  font-size: 90%; /* Légèrement plus petit que le texte environnant */
+  border-radius: 4px;
+}
+
+
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/

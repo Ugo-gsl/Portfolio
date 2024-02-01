@@ -38,10 +38,123 @@
   </header>
   <section>
     <div class="container new">
-      <h1>Déploiement Wordpress / Nextcloud / GLPI</h1>
-      <p>Ce projet combine des compétences en administration de serveurs, en déploiement d'applications et en gestion de contenu. Il est très pertinent dans le contexte actuel où la présence en ligne est cruciale pour les entreprises.</p>    
+      <h1>Déploiement serveur Wordpress </h1>
+      <p>Le serveur web Nginx, combiné avec MySQL et PHP, forme une solution robuste pour héberger des sites WordPress. </p>
+      <p>Pour commencer, l'installation de Nginx permet de servir les fichiers web. Ensuite, l'installation de MySQL est essentielle pour gérer la base de données de WordPress. La dernière composante est PHP, un langage de script côté serveur. WordPress est écrit en PHP, ce qui rend ce langage crucial pour le fonctionnement du site. Une fois ces composants installés et configurés, vous pourrez installer WordPress et commencer à créer votre site sur une plateforme puissante et flexible.</p>
+      <img src="assets/img/Wordpress/téléchargement.png" alt="">
     </div>
   </section>
+
+  <div class="container section-title"><h2>1. Objectifs</h2></div>
+    <div class="container">
+      <p>L'objectif de ce projet est de mettre en place un serveur web efficace et performant pour héberger des sites WordPress. </p>
+    </div>
+    <div class="container section-title"><h2>2. Déroulement</h2></div>
+    <div class="container">
+      <h3>Étape 1 : Prérequis</h3>
+      <ul class="custom-list">
+        <li>Un serveur Linux</li>
+        <li>Accès en tant que superutilisateur <code>su -</code></li>
+        <li>SFTP: On peut copier des fichier d'autre machine avec sftp <code>sftp user0@172.16.246.10</code> tant que ssh est installer sur la machine a distance</li>
+      </ul>
+
+      <h3>Étape 2 : Installer et configurer Nginx</h3>
+      <ul class="custom-list">
+        <li>2.1. Mettez à jour les paquets du système : <code>apt update</code></li>
+        <li>2.2 Installez Nginx : <code>apt install nginx</code></li>
+        <li>2.3 Démarrez le service Nginx : <code>systemctl start nginx</code></li>
+      </ul>
+      <div class="slide1"><div class="slide"><ul class="custom-list"><li>2.4. Vérifiez si Nginx est en cours d'exécution : <code>systemctl status nginx</code></li></ul></div><div class="slide"><img src="assets/img/Wordpress/nginx status.png" alt=""></div></div>
+      <ul class="custom-list">
+        <li>2.5 Créez un fichier de configuration pour WordPress : <code>nano /etc/nginx/sites-enabled/EMXPnw52</code></li>
+      </ul>
+      <div class="slide1">
+        <div class="slide">
+          <ul class="custom-list">
+            <li>2.6 Collez le contenu suivant dans le fichier :</li>
+          </ul>
+        </div>
+        <div class="slide">
+          <pre>
+            server { 
+              listen 80;
+              listen [::]:80;
+              
+              server_name EMXPnw52.eval244.yajako.info.lan;
+              
+              root /var/www/EMXPnw52;
+              index index.php;
+                location ~ .php$ {
+                  include snippets/fastcgi-php.conf;
+                  fastcgi_pass unix:/run/php/php7.4-fpm.sock;
+                }   
+             }</pre>
+        </div>
+      </div>
+      <ul class="custom-list">
+        <li>2.7 Si la syntaxe est valide, redémarrez Nginx : <code>systemctl restart nginx</code></li>
+      </ul>
+
+      <h3>Étape 3 : Installer MySQL et PHP</h3>
+      <ul class="custom-list">
+        <li>3.1. Installez le serveur MySQL : <code>apt install mariadb-server</code></li>
+        <li>3.2 Installez PHP et les extensions requises : <code>apt install php-fpm php-mysql</code></li>
+      </ul>
+
+      <h3>Étape 4 : Télécharger et installer WordPress</h3>
+      <ul class="custom-list">
+        <li>4.1 Accédez au répertoire /var/www/ : <code>cd /var/www/</code></li>
+        <li>4.2 Téléchargez la dernière version de WordPress depuis le site officiel (https://wordpress.org/) : <code>wget https://wordpress.org/latest.zip</code></li>
+        <li>3. Extrayez l'archive téléchargée : <code>unzip latest.zip</code></li>
+        <li>4. Renommez le répertoire extrait en "EMXPnw52" : <code>mv wordpress/ EMXPnw52</code></li>
+        <li>Définissez les permissions appropriées sur le répertoire WordPress :
+          <pre>
+chown -R www-data:www-data /var/www/EMXPnw52  
+chmod -R 755 /var/www/EMXPnw52</pre></li></ul>
+
+      <div class="slide1" style="align-items: normal;">
+        <div class="slide">
+          <h3>Étape 5: Créer une base de données MySQL pour WordPress</h3>
+          <ul class="custom-list">
+            <li>5.1. Connectez-vous à MySQL en utilisant la commande suivante : <code>mysql -u root</code></li>
+            <li>5.2. Une fois connecté, créez une nouvelle base de données pour WordPress : <code>CREATE DATABASE EMXPnw52;</code></li>
+            <li>On peut la voir en tapant <code>show databases;</code> <img src="assets/img/Wordpress/databases.png" alt="" style="width: 60%;"></li>
+            <li>5.3 Créez un nouvel utilisateur et attribuez-lui un mot de passe : <pre>CREATE USER 'EMXPnw52'@'localhost' IDENTIFIED BY 'EMXPnw52';</pre></li>
+            <li>5.4 Accordez à l'utilisateur des privilèges sur la base de données : <pre>GRANT ALL PRIVILEGES ON EMXPnw52.* TO 'EMXPnw52'@'localhost';</pre></li>
+            <li>5.5 Mettez à jour les privilèges : <pre>FLUSH PRIVILEGES;</pre></li>
+          </ul>
+        </div>
+        <div class="slide">
+          <h3>Étape 6 : Configuration Base de donnée manuellement (facultatif)</h3>
+          <p>La Base de donnée doit ce connecter automatiquement quand on lance l'interface graphique de Wordpress mais certaine fois cela ne fonctione pas.</p>
+          <ul class="custom-list">
+            <li>6.1 Renommez le fichier de configuration WordPress : <br><code>mv /var/www/EMXPnw52/wp-config-sample.php /var/www/EMXPnw52/wp-config.php</code></li>
+            <li>6.2. Ouvrez le fichier <code>wp-config.php</code>: <pre>nano /var/www/EMXPnw52/wp-config.php</pre></li>
+            <li>6.3 Modifiez les lignes suivantes en fonction de vos paramètres de base de données MySQL : 
+              <pre>
+define('DB_NAME', 'EMXPnw52');
+define('DB_USER', 'EMXPnw52');
+define('DB_PASSWORD', 'EMXPnw52');
+define('DB_HOST', 'localhost');
+define('DB_CHARSET', 'utf8');
+define('DB_COLLATE', '');
+define( 'WP_DEBUG', true );</pre>
+            </li>
+            <li>6.4. Enregistrez le fichier et quittez l'éditeur.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Étape 7 : Accéder à WordPress</h3>
+      <ul class="custom-list">
+        <li>7.1 Ouvrez votre navigateur Web et accédez à l'URL suivante : <code>EMXPnw52.eval244.yajako.info.lan</code></li>
+        <li>7.2 Suivez les instructions à l'écran pour configurer votre site WordPress, créer un compte administrateur, etc</li>
+        <img src="assets/img/Wordpress/300px-login_form.png" alt="">
+      </ul>
+
+      <div class="container section-title"><h2>3. Conclusion</h2></div>
+      <p>Ce projet est intéressant car il va me service de base pour la compréhention des serveur web, bases de donnée  et plus globalement Linux.</p>
+    </div>
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
@@ -64,6 +177,11 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <style>
+    h3{
+      margin-top: 50px;
+    }
+  </style>
 
 </body>
 
