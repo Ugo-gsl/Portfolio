@@ -39,7 +39,7 @@
   <section>
     <div class="container new">
       <h1>Configuration réseau pour un nouveau site</h1>
-      <p>Ce projet a consisté à gérer un projet d'infrastructure réseau de A à Z. Suite a une réhorganisation de la médiathèque tout le </p><br>
+      <p>Ce projet a consisté à gérer un projet d'infrastructure réseau de A à Z. Suite a une réhorganisation de la médiathèque tout le système réseaux à du être rénover</p><br>
     </div>
     <div class="container">
       <h3>Les 5 Phases du déploiement de l'infrastructure informatique et des réseaux : </h3><br>
@@ -53,9 +53,16 @@
     </div>
   </section>
   <div class="container section-title"><h2>1. Installation serveur Webkiosk</h2></div>
-  <div class="container">
-
+  <div class="container new">
+    <p>WEBKIOSK est un outil numérique utilisé principalement dans les écoles et les bibliothèques pour accéder et gérer des ressources en ligne de manière sécurisée. Il permet une navigation Internet contrôlée, un accès facile à diverses bases de données et ressources électroniques, tout en offrant des options de personnalisation et de suivi pour les administrateurs.</p>
   </div>
+  <div class="container">
+    <h3>Serveur Webkiosk</h3>
+    <p>Le serveur Webkiosk et un raspberry pi. La configuration du serveur webkiosk et d'impression on directment configurer par la sociéter.</p>
+    <p>De notre coter il nous reste plus qu'a le rélier a notre réseaux EPN(public) puis pour les antennes en faire re sortir un autre sous-réseaux d'une autre carte.</p>
+    <p>Pour finir en sortie du nouveaux réseaux on rajoute un switch qui vas nous servire a connecter toute les antennes WIFI (Webkiosk)</p>
+  </div>
+  
   <div class="container section-title"><h2>2. Installation des PC</h2></div>
   <div class="container">
     <h3>PC dans notre domaine (les agents mairie) </h3>
@@ -171,19 +178,21 @@
   <div class="container">
     <p>Pour garantir le bon fonctionnement du système, effectuez les tests suivants :</p>
     <ul class="custom-list">
-      <li>Serveur Webkiosk : Vérifiez la connectivité, les performances et la gestion des requêtes utilisateurs.</li>
-      <h4>PCs</h4>
+      <h4>Serveur Webkiosk :</h4>
+      <li>Vérifiez la connectivité des PCs, les performances et la gestion des requêtes utilisateurs.</li>
+      <h4>PCs :</h4>
       <li>Domaine Mairie : Confirmez l'intégration au domaine, la fonctionnalité des comptes et des applications métiers.</li>
       <li>Hors Domaine : Assurez-vous du bon fonctionnement en mode kiosque ou avec Webkiosk.</li>
-      <li>Réseau : Testez la connectivité, la configuration des VLAN et la sécurité des switchs.</li>
+      <h4>Réseau :</h4>
+      <li>Testez la connectivité, la configuration des VLAN et la sécurité des switchs.</li>
       <h4>WiFi :</h4>
       <li>STC Mairie : Vérifiez la connexion stable et sécurisée pour le personnel.</li>
       <li>Webkiosk Public : Testez l'accès et l'authentification au réseau Webkiosk.</li>
       <h4>Imprimantes :</h4>
       <li>STC Mairie : Assurez-vous de la connexion au réseau et du bon fonctionnement d'impression.</li>
-      <li>Webkiosk Public : Vérifiez l'accessibilité et la fonctionnalité pour les utilisateurs publics.
-        Un test de charge global pour simuler l'usage quotidien est également recommandé.</li>
+      <li>Webkiosk Public : Vérifiez l'accessibilité et la fonctionnalité pour les utilisateurs publics.</li>
     </ul>
+    <p>Un test de charge global pour simuler l'usage quotidien est également recommandé.</p>
   </div>
     
   
