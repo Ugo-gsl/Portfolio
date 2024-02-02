@@ -41,7 +41,48 @@
       <h1>Remplacement du serveur de production</h1>
       <p>L'objectif du remplacement du serveur de production est d'améliorer l'efficacité opérationnelle, garantir la continuité des affaires et renforcer la sécurité des systèmes.</p>
     </div>
+    <div class="container" style="display: flex;justify-content: center;">
+      <img src="assets/img/ppe6/Capture d'écran 2024-02-02 114120.png" alt="" style="width: 100vh;">
+    </div>
   </section>
+  <div class="container section-title"><h2>1. Installation du serveur physique</h2></div>
+  <div class="container">
+    <ul>
+      <li><strong>Préparation du serveur:</strong> Assurez-vous que le serveur est correctement installé dans son rack, connecté à l'alimentation et au réseau, et que tous les composants hardware nécessaires sont installés (disques durs, cartes réseau, etc.).</li>
+    </ul>
+    <div class="container section-title"><h2>2. Installation et configuration de iDRAC (BIOS)</h2></div>
+    <h3></h3>
+    <p>iDRAC (Integrated Dell Remote Access Controller) permet de gérer à distance votre serveur Dell.</p>
+    <ul>
+      <li><strong>Accès à iDRAC:</strong> Au démarrage du serveur, appuyez sur la touche F2 pour accéder au BIOS et configurez iDRAC.</li>
+      <li><strong>2.1 Mise en RAID 5:</strong>
+      <ul>
+        <li>Configuration du RAID: Dans le BIOS, accédez à la configuration du contrôleur RAID. Sélectionnez les disques à inclure dans le volume RAID et choisissez RAID 5 comme niveau de RAID.</li>
+      </ul>
+      </li>
+      <li><strong>2.2 Modification IP / MDP / Ajout dans le domaine:</strong>
+        <ul>
+          <li><strong>Configuration réseau:</strong>Configurez l'adresse IP de iDRAC pour permettre une gestion à distance. Sécurisez l'accès en modifiant le mot de passe par défaut.</li>
+          <li><strong>Intégration au domaine:</strong>Pour une gestion centralisée, vous pouvez ajouter iDRAC à votre domaine Active Directory.</li>
+        </ul>
+      </li>
+    </ul>
+    <div class="container section-title"><h2>3. Installation ESXi via clé BOOTABLE</h2></div>
+    <ul>
+      <li><strong>Création de la clé USB bootable:</strong> Téléchargez l'image ISO d'ESXi depuis le site de VMware et utilisez un outil tel que Rufus pour créer une clé USB bootable.</li>
+      <li><strong>Installation d'ESXi:</strong> Avec la clé USB connectée, redémarrez le serveur et sélectionnez la clé USB comme périphérique de démarrage. Suivez les instructions à l'écran pour installer ESXi.</li>
+      <li><strong>3.1 Configuration de ESXi</strong>
+        <ul>
+          <li><strong>Configuration de vSwitch:</strong> Connectez-vous à l'interface de gestion d'ESXi et configurez les vSwitches pour séparer le trafic réseau selon vos besoins (gestion, vMotion, stockage, etc.).</li>
+          <li><strong>Création de Datastores:</strong> Utilisez le stockage disponible pour créer des Datastores. ESXi utilisera ces Datastores pour stocker les fichiers de machines virtuelles.</li>
+        </ul>
+      </li>
+    </ul>
+    <div class="container section-title"><h2>4. Migration de VMs à chaud</h2></div>
+    <ul>
+      <li><strong>Utilisation de vMotion:</strong> VMware vMotion permet de déplacer des VMs d'un serveur à un autre sans interruption de service. Configurez vMotion sur vos hôtes ESXi et utilisez le vCenter Server pour initier la migration.</li>
+    </ul>
+  </div>
 
 
   <!-- ======= Footer ======= -->
