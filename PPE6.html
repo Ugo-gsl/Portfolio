@@ -55,16 +55,24 @@
     <p>iDRAC (Integrated Dell Remote Access Controller) permet de gérer à distance votre serveur Dell.</p>
     <ul>
       <li><strong>Accès à iDRAC:</strong> Au démarrage du serveur, appuyez sur la touche F2 pour accéder au BIOS et configurez iDRAC.</li>
-      <li><strong>2.1 Mise en RAID 5:</strong>
-      <ul>
-        <li>Configuration du RAID: Dans le BIOS, accédez à la configuration du contrôleur RAID. Sélectionnez les disques à inclure dans le volume RAID et choisissez RAID 5 comme niveau de RAID.</li>
-      </ul>
+      <li><strong>2.1 Modification de l'IP:</strong> Configurez l'adresse IP de iDRAC pour permettre une gestion à distance.</li>
+      <li>
+        <div class="slide1">
+          <div class="slide"><strong>2.2 Prise du serveur a distance avec son IP</strong></div>
+          <div class="slide"><img src="assets/img/ppe6/Capture d'écran 2024-02-02 154856.png" alt=""></div>
+        </div>
       </li>
-      <li><strong>2.2 Modification IP / MDP / Ajout dans le domaine:</strong>
-        <ul>
-          <li><strong>Configuration réseau:</strong>Configurez l'adresse IP de iDRAC pour permettre une gestion à distance. Sécurisez l'accès en modifiant le mot de passe par défaut.</li>
-          <li><strong>Intégration au domaine:</strong>Pour une gestion centralisée, vous pouvez ajouter iDRAC à votre domaine Active Directory.</li>
-        </ul>
+      <li>
+        <div class="slide1">
+          <div class="slide"><strong>2.3 Modification de MDP: </strong>Sécurisez l'accès en modifiant le mot de passe par défaut. Dans <code>Paramètres de l'IDRAC</code> -> <code>Utilisateur</code> -> <code>Modifier</code>. Changer le MDP en respectant la politique de sécuriter</div>
+          <div class="slide"><img src="assets/img/ppe6/Capture1.png" alt=""></div>
+        </div>
+      </li>
+      <li>
+        <div class="slide1">
+          <div class="slide"><strong>2.4 Mise en RAID5:</strong> Dans l'interface graphique aller dans <code>Stockage</code> -> <code>Disques virtuels</code> -> <code>Créer un disque virtuel</code> -> Sélectionnez les disques à inclure dans le volume RAID (1 RAID5 SSD et 1 RAID5 HDD) puis valider.</div>
+          <div class="slide"><img src="assets/img/ppe6/Capture2.png" alt=""></div>
+        </div>
       </li>
     </ul>
     <div class="container section-title"><h2>3. Installation ESXi via clé BOOTABLE</h2></div>
@@ -73,15 +81,31 @@
       <li><strong>Installation d'ESXi:</strong> Avec la clé USB connectée, redémarrez le serveur et sélectionnez la clé USB comme périphérique de démarrage. Suivez les instructions à l'écran pour installer ESXi.</li>
       <li><strong>3.1 Configuration de ESXi</strong>
         <ul>
-          <li><strong>Configuration de vSwitch:</strong> Connectez-vous à l'interface de gestion d'ESXi et configurez les vSwitches pour séparer le trafic réseau selon vos besoins (gestion, vMotion, stockage, etc.).</li>
-          <li><strong>Création de Datastores:</strong> Utilisez le stockage disponible pour créer des Datastores. ESXi utilisera ces Datastores pour stocker les fichiers de machines virtuelles.</li>
+          <li>
+            <div class="slide1">
+              <div class="slide"><strong>Configuration de vSwitch:</strong> Connectez-vous à l'interface de gestion d'ESXi et configurez les vSwitches pour séparer le trafic réseau selon vos besoins (gestion, réseaux à part, stockage, etc.).</div>
+              <div class="slide"><img src="assets/img/ppe6/Capture5.png" alt=""></div>
+            </div>
+          </li>
+          <li>
+            <div class="slide1">
+              <div class="slide"><strong>Création de Datastores:</strong> Utilisez le stockage (RAID5) créer dans l'IDRAC pour que l'ESXi les utilise pour stocker les fichiers de machines virtuelles.</div>
+              <div class="slide"><img src="assets/img/ppe6/Capture7.png" alt=""></div>
+            </div>
+          </li>
         </ul>
       </li>
     </ul>
     <div class="container section-title"><h2>4. Migration de VMs à chaud</h2></div>
+    <p>Nous utilisont vSphere pour centraliser et controller nos ESXI un de ces outils clés est vMotion </p>
     <ul>
       <li><strong>Utilisation de vMotion:</strong> VMware vMotion permet de déplacer des VMs d'un serveur à un autre sans interruption de service. Configurez vMotion sur vos hôtes ESXi et utilisez le vCenter Server pour initier la migration.</li>
     </ul>
+    <div class="slide1">
+      <div class="slide"><p>Pour cela aller dans <code>vSphere</code> -> <code>clic droit sur une VM</code> -> <code>Puis appuyer sur migrer</code>. Il ne reste plus qu'a choisir le nouveau serveur.</p></div>
+      <div class="slide" style="display: flex;justify-content: center;"><img src="assets/img/ppe6/unnamed.png" alt="" style="width: 70%;"></div>
+    </div>
+    
   </div>
 
 
