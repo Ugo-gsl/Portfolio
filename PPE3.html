@@ -107,28 +107,33 @@
   <div class="container">
     <h3>Réseaux</h3>
     <p>Dans la Mairie le réseaux Mairie et Public sont 2 réseaux séparer physiquement pour ce nouveaux site j'ai décider de les réunir sur un seul switch séparer par de VLAN comme représenter sur le schémat.</p>
-    <img src="assets/img/new-site/Capture d'écran 2024-02-01 170142.png" alt="">
-    <h3>Switch</h3>
-    <p>Ensuite les switchs sont configurer sur le réseaux mairie:</p>
-    <ul class="custom-list">
-      <li>Modifier IP sur une plage réserver</li>
-      <li>Rajout sur la topology réseaux</li>
-    </ul>
+    <img src="assets/img/new-site/Capture d'écran 2024-02-01 170142.png" alt="" style="margin-left: 30%;">
 
-    <p>De plus avec une nouvelle politique que j'ai mit en place sur les switch qui est de:</p>
-    <ul class="custom-list">
-      <li>Rajouter 802.1x</li>
-      <li>Modification des mots de passes robuste</li>
-      <li>Mise à jours des switch</li>
-      <li>Passage en SNMPv3</li>
-      <li>Mise en place de VLAN sur chaque port</li>
-    </ul>
-
-    <h3>Brasage</h3>
-    <p>Pour finir relier chaque noeux du bandeaux a un port avec le bon VLAN</p>
-
+    <div class="slide1" style="align-items: start;">
+      <div class="slide">
+        <h3>Switch</h3>
+        <p>Ensuite les switchs sont configurer sur le réseaux mairie:</p>
+        <ul class="custom-list">
+          <li>Modifier IP sur une plage réserver</li>
+          <li>Rajout sur la topology réseaux</li>
+        </ul>
+        <p>De plus avec une nouvelle politique que j'ai mit en place sur les switch qui est de:</p>
+        <ul class="custom-list">
+          <li>Rajouter 802.1x</li>
+          <li>Modification des mots de passes robuste</li>
+          <li>Mise à jours des switch</li>
+          <li>Passage en SNMPv3</li>
+          <li>Mise en place de VLAN sur chaque port</li>
+        </ul>
+      </div>
+      <div class="slide">
+        <h3>Brasage</h3>
+        <p>Pour finir relier chaque noeux du bandeaux a un port avec le bon VLAN</p>
+      </div>
+    </div>    
   </div>
 
+  <section>
   <div class="container section-title"><h2>4. Configuration Antenne WIFI</h2></div>
   <div class="container">
     <h3>Antenne Wifi STC (Mairie)</h3>
@@ -144,7 +149,9 @@
     </ul>
     <p>Il faut ensuite enlever les securité de la borne afin qu’elle ne demande pas de mdp à la connexion puisque c’est webkiosk qui s’occupe de l’authentification</p>
     <p>Les pc qui se connectent au wifi webkiosk adoptent une ip 192.168.30.xxx</p>
-  </div>
+  </div>  
+  </section>
+  
 
   <div class="container section-title"><h2>5. Configuration imprimente</h2></div>
   <div class="container">
@@ -174,6 +181,7 @@
     </ul>
   </div>
 
+  <section>
   <div class="container section-title"><h2>6. Test de fonctionnement</h2></div>
   <div class="container">
     <p>Pour garantir le bon fonctionnement du système, effectuez les tests suivants :</p>
@@ -194,6 +202,9 @@
     </ul>
     <p>Un test de charge global pour simuler l'usage quotidien est également recommandé.</p>
   </div>
+  </section>
+
+  
     
   
   
