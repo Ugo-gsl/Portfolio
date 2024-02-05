@@ -39,8 +39,52 @@
   <section>
     <div class="container new">
       <h1>Refonte du réseau</h1>
-      <p>Ce projet démontre non seulement des compétences techniques en matière de réseau, mais aussi une compréhension approfondie des aspects de sécurité réseau.</p>
+      <p>Ce projet va pouvoir améliorer notre stratégie sur la sécurité de notre réseau, mais aussi une écologie pour notre réseau car à ce jour plusieurs Lan physique coexistait ce qui entrainait le doublement de chaque appareil.</p>
     </div>
+    <div class="container">
+      <div class="slide1">
+        <div class="slide">
+          <h2>Objectifs du projet</h2>
+          <p>
+            Le but de la refonte est d'améliorer notre réseau pour trois raisons principales : il doit être plus rapide et plus fort pour supporter plus d'informations et de programmes, être plus sécurisé pour protéger les données selon les nouvelles règles, et être facile à agrandir ou à modifier quand notre organisation en aura besoin.</p>
+        </div>
+        <div class="slide">
+          <h2>Portée du projet</h2>
+          <p>Le projet va examiner notre réseau actuel, décider quels éléments doivent être mis à jour ou changés, et installer de nouvelles améliorations. On va remplacer les vieux commutateurs, organiser le réseau en VLANs pour qu'il soit plus ordonné, et arranger la structure du réseau pour que les données se déplacent mieux.</p>
+        </div>
+      </div>
+      <img src="assets/img/ppe2/1.png" alt="" style="width: 100%;">
+    </div>
+  </section>
+  <section>
+    <div class="container section-title"><h2>Passage au VLAN</h2></div>
+    <div class="container">
+      <p>Le projet de refonte du réseau inclut l'intégration de VLAN. Les VLAN sont des sous-réseaux qui permettent de segmenter un réseau physique en plusieurs réseaux logiques distincts, permettant ainsi une meilleure gestion du trafic et une augmentation de la sécurité. Dans notre cas, quatre VLAN seront créés, chacun avec un but spécifique.</p>
+      <h2>Planification de la structure VLAN</h2>
+      <ul>
+        <li><strong>VLAN 1 - STC (Mairie) :</strong> Le VLAN par défaut sera utilisé pour les agents. Ce VLAN s'occupera du trafic général de l'entreprise et sera la colonne vertébrale du réseau interne.</li>
+        <li><strong>VLAN 140 - EPN (Espace Public Numérique) :</strong> Ce VLAN est destiné aux espaces où l’accès au réseau est fourni pour des services publics numériques. Il sera configuré pour permettre l'accès à des ressources spécifiques tout en isolant le trafic des autres VLANs pour des raisons de sécurité et de performance.</li>
+        <li><strong>VLAN 120 - ToIP (Téléphonie sur IP) :</strong> Ce VLAN sera prioritaire pour le trafic vocal. Avec la téléphonie IP, la qualité de service (QoS) est cruciale, donc ce VLAN sera configuré pour assurer que les appels aient la bande passante nécessaire et soient exempts de délais ou d'interruptions.</li>
+        <li><strong>VLAN 100 - Hotspot :</strong> Ce VLAN servira aux hotspots Wi-Fi offerts au public. Il offrira un accès Internet séparé du réseau interne de l'organisation pour protéger les ressources de l'entreprise et gérer la bande passante allouée aux utilisateurs temporaires.</li>
+      </ul>
+      
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <h2>Stratégie de déploiement</h2>
+      <h4>Création des VLANs sur les switchs </h4>
+      <h4>Configuration de la QoS pour ToIP</h4>
+      <h4>Règles d'accès</h4>
+    </div>
+  </section>
+  <section><div class="container section-title"><h2>Modification des switchs</h2></div>
+  </section>
+  <section><div class="container section-title"><h2>Mise en place de stack</h2></div>
+  </section>
+  <section><div class="container section-title"><h2>Topologie réseau</h2></div>
+  </section>
+  <section><div class="container section-title"><h2>Conclusion</h2></div>
   </section>
 
   <!-- ======= Footer ======= -->
