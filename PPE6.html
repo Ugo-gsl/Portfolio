@@ -96,18 +96,20 @@
         </ul>
       </li>
     </ul>
-    <div class="container section-title"><h2>4. Installation vSphere 8.0</h2></div>
-    <div class="container section-title"><h2>4. Configuration vSphere 8.0</h2></div>
-    centre de donné
-    ajouter un hôte
-      Ajouter les 2 ESXI
-    <div class="container section-title"><h2>4. Migration de VMs à chaud</h2></div>
+    <section>
+      <div class="container section-title"><h2>4. Configuration vSphere 8.0</h2></div>
+      <p>centre de donné</p>
+      <p>ajouter un hôte</p>
+      <p>Ajouter les 2 ESXI</p>
+    </section>
+    
+    <div class="container section-title"><h2>5. Migration de VMs à chaud</h2></div>
     <p>Nous utilisont vSphere pour centraliser et controller nos ESXI un de ces outils clés est vMotion </p>
     <ul>
       <li><strong>Utilisation de vMotion:</strong> VMware vMotion permet de déplacer des VMs d'un serveur à un autre sans interruption de service. Configurez vMotion sur vos hôtes ESXi et utilisez le vCenter Server pour initier la migration.</li>
     </ul>
     <div class="slide1">
-      <div class="slide"><p>Pour cela aller dans <code>vSphere</code> -> <code>clic droit sur une VM</code> -> <code>Puis appuyer sur migrer</code>. Il ne reste plus qu'a choisir le nouveau serveur.</p></div>
+      <div class="slide"><p>Pour cela aller dans <code>vSphere</code> -> <code>clic droit sur une VM</code> -> <code>Puis appuyer sur migrer</code>. Il ne reste plus qu'a choisir le nouveau serveur.</p><p>La migration ce fait avec les VMs a chaud et il ne doit pas y avoir de perte pendant le transfère</p></div>
       <div class="slide" style="display: flex;justify-content: center;"><img src="assets/img/ppe6/unnamed.png" alt="" style="width: 70%;"></div>
     </div>
     
