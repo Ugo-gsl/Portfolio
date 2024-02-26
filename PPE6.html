@@ -98,12 +98,45 @@
       </li>
     </ul>
     </section>
+
     <section>
       <div class="container section-title"><h2>4. Configuration vSphere 8.0</h2></div>
-      <p>centre de donné</p>
-      <p>ajouter un hôte</p>
-      <p>Ajouter les 2 ESXI</p>
+      <ul>
+        <li><strong>Installation de vSphere:</strong> Créer une VM(bureautique) sur le ESXI et lancer l'exécuter qui se trouve dans l'ISO de vSphere, ensuite suivre le programme d'installation avec les paramètres voulu. Lui resegner Nom d'hôte, Nom d'utilisateru, Mot de passe. Ensuite lui lié un dossier et une ressource de calcule de l'ESXI et une banque de donné.</li>
+        <li>Pour finir il sufie de lancer la VM créer par l'ISO et supprimer la VM(bureautique) qui ne sert plus a rien.</li>
+        <em>tuto détailler: https://www.youtube.com/watch?v=KpuTrlXnBuo</em>
+      </ul>
+
+      <h3>Connexion à vSphere Web Client</h3>
+      <ul>
+        <li>Ouvrez un navigateur Web et accédez à l'URL de vSphere Web Client.</li>
+        <li>Entrez vos identifiants pour vous connecter à vSphere.</li>
+      </ul>
+      <div class="slide1">
+        <div class="slide"><strong>Création d'un Centre de Données :</strong>
+          <ul>
+            <li>Dans le volet de navigation de vSphere Web Client, sélectionnez l'inventaire.</li>
+            <li>Cliquez avec le bouton droit de la souris sur le Datacenter où vous souhaitez créer le centre de données.</li>
+            <li>Choisissez "New Datacenter" et nommez-le selon vos préférences.</li>
+          </ul>        
+        </div>
+        <div class="slide"><img src="assets/img/ppe6/Capture8.png" alt=""></div>
+      </div>
+
+      <div class="slide1">
+        <div class="slide"><strong>Ajout d'un Hôte ESXi au Centre de Données :</strong>
+          <ul>
+            <li>Dans vSphere Web Client, sélectionnez le centre de données que vous avez créé.</li>
+            <li>Cliquez avec le bouton droit de la souris sur le centre de données et choisissez "Add Host".</li>
+            <li>Entrez l'adresse IP ou le nom d'hôte de l'hôte ESXi que vous souhaitez ajouter.</li>
+            <li>Entrez les informations d'identification de l'hôte ESXi et terminez le processus d'ajout.</li>
+          </ul>        
+        </div>
+        <div class="slide"><img src="assets/img/ppe6/Capture9.png" alt=""></div>
+      </div>
     </section>
+
+
     <section>
       <div class="container section-title"><h2>5. Migration de VMs à chaud</h2></div>
       <p>Nous utilisont vSphere pour centraliser et controller nos ESXI un de ces outils clés est vMotion </p>
