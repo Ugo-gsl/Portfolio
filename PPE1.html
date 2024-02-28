@@ -43,6 +43,110 @@
     </div>
   </section>
 
+  <section>
+    <div class="container section-title"><h2>Installation physique</h2></div>
+    <div class="container">
+      <div class="slide1">
+        <div class="slide">
+          <h3>Étape 1 : Placement et Connexions</h3>  
+          <ul>
+            <li>Placez le NAS Synology dans un endroit approprié, de préférence dans un emplacement bien ventilé.</li>
+            <li>Connectez le NAS à deux sources d'alimentation : une normale et une ondulée pour assurer une alimentation continue et stable.</li>
+            <li>Assurez-vous que le NAS est connecté à un réseau local via un câble Ethernet.</li>
+          </ul>
+          <h3>Étape 2 : Installation des Disques Durs</h3>
+          <ul>
+            <li>Insérez les disques durs compatibles dans les baies du NAS selon les spécifications du fabricant.</li>
+            <li>Assurez-vous que les disques durs sont correctement insérés et verrouillés en place.</li>
+          </ul>
+        </div>
+        <div class="slide" style="display: flex;justify-content: space-between;flex-direction: column;align-items: center;"><img src="assets/img/ppe1/téléchargement.jpg" alt="" style="width: 45%;"><img src="assets/img/ppe1/téléchargement (1).jpg" alt="" style="width: 45%;"></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container section-title"><h2>Mise en réseau</h2></div>
+    <div class="container">
+      <h3>Pour la mise en réseau il suffit :</h3>
+      <ul>
+        <li>Connectez le NAS Synology à votre réseau local à l'aide d'un câble Ethernet.</li>
+        <li>
+          <div class="slide1">
+            <div class="slide">Configurez les paramètres réseau du NAS via Synology Assistant pour lui attribuer une adresse IP statique compatible avec votre réseau.</div>
+            <div class="slide"><img src="assets/img/ppe1/Capture5.png" alt=""></div>
+          </div>
+        </li>
+        <li>
+          <div class="slide1">
+            <div class="slide">Pour finir aller dans <code>Panneau de configuration</code> -> <code>Réseau</code> pour configurez les autre interface réseaux si nécessaire.</div>
+            <div class="slide"><img src="assets/img/ppe1/Capture6.png" alt=""></div>
+          </div>
+        </li>
+      </ul>
+      <img src="" alt="">
+    </div>
+  </section>
+
+  <div class="container section-title"><h2>Création de RAID</h2></div>
+  <div class="container">
+    <h3>Configuration du RAID</h3>
+    <ul>
+      <li>
+        <div class="slide1">
+          <div class="slide">Dans l'interface d'administration, accédez au gestionnaire de stockage ou de disques.</div>
+          <div class="slide"><img src="assets/img/ppe1/Capture1.png" alt=""></div>
+        </div>
+      </li>
+      <li>Suivez les instructions pour créer un nouveau volume RAID.</li>
+      <li>
+        <div class="slide1">
+          <div class="slide">Choisissez le niveau de RAID approprié en fonction de nos besoins en redondance et en performances (RAID 0, RAID 1, RAID 5, RAID 6, etc.).</div>
+          <div class="slide"><img src="assets/img/ppe1/Capture2.png" alt="" ><img src="assets/img/ppe1/Capture3.png" alt=""></div>
+        </div>
+      </li>
+      <li>
+        <div class="slide1">
+          <div class="slide">Suivez les étapes pour sélectionner les disques durs à inclure dans le RAID.</div>
+          <div class="slide"><img src="assets/img/ppe1/Capture3.png" alt=""></div>
+        </div>
+      </li>
+      <li>
+        <div class="slide1">
+          <div class="slide">Pour finir créer un volume avec le RAID qui vient d'être créer</div>
+          <div class="slide"><img src="assets/img/ppe1/Capture7.png" alt=""></div>
+         </div>
+      </li>
+      
+    </ul>
+  </div>   
+
+  <section>
+    <div class="container section-title"><h2>Création de dossier partager</h2></div>
+    <div class="container">
+      <ul>
+        <li>
+          <div class="slide1">
+            <div class="slide">Dans <code>Panneau de configuration</code> -> <code>Dossier partagé</code> Créer un nouveau dossier partagé en selectionnant le volume créer et suiver l'assistant de création.</div>
+            <div class="slide"><img src="assets/img/ppe1/Capture8.png" alt=""></div>
+           </div>
+        </li>
+        <li>
+          <div class="slide1">
+            <div class="slide">Une fois créer donner les droit au utilisateur voulu puis vérifier ca création dans <code>File Station</code> </div>
+            <div class="slide"><img src="assets/img/ppe1/Capture9.png" alt=""></div>
+           </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="container section-title"><h2>Connection avec Veeam backup & replication</h2></div>
+    <div class="container">
+       
+    </div>
+  </section>
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
