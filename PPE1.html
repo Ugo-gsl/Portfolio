@@ -44,6 +44,28 @@
   </section>
 
   <section>
+    <div class="container section-title"><h2>Contexte et Compétences mises en oeuvre</h2></div>
+    <div class="container">
+      <h3>Contexte de ce Projet:</h3>
+      <ul>
+        <li><strong>Besoin de Sauvegarde :</strong> L'entreprise reconnaît l'importance de sauvegarder ses données critiques et cherche à mettre en place une solution fiable pour protéger ses informations.</li>
+        <li><strong>Sécurité et Fiabilité :</strong> La sécurité des données est une priorité, et le déploiement d'un NAS Synology permettra de renforcer la sauvegarde des données tout en assurant une disponibilité et une fiabilité élevées.</li>
+        <li><strong>Intégration avec l'Infrastructure Existante :</strong> Le NAS Synology doit être intégré à l'infrastructure informatique existante de l'entreprise, ce qui nécessite une bonne compréhension des réseaux et des systèmes de stockage.</li>
+      </ul>
+    </div>
+    <div class="container">
+      <h3>Compétences Mises en Œuvre :</h3>
+      <ul>
+        <li>Connaissance des Solutions de Stockage</li>
+        <li>Maîtrise des Réseaux</li>
+        <li>Expertise en Sécurité des Données</li>
+        <li>Familiarité avec les Outils de Sauvegarde</li>
+      </ul>
+      <p>En résumé, ce projet met en œuvre un ensemble de compétences allant de la configuration matérielle à la mise en réseau, en passant par la sécurité des données et la gestion des sauvegardes, afin de répondre aux besoins de l'entreprise en matière de stockage et de protection des données.</p>
+    </div>
+  </section>
+
+  <section>
     <div class="container section-title"><h2>Installation physique</h2></div>
     <div class="container">
       <div class="slide1">
@@ -144,7 +166,27 @@
   <section>
     <div class="container section-title"><h2>Connection avec Veeam backup & replication</h2></div>
     <div class="container">
-       
+      <h4>Ajout du NAS Synology dans Veeam Backup & Replication :</h4>
+      - Lancez Veeam Backup & Replication sur votre système. <br>
+      - Accédez à l'interface d'administration et cliquez sur l'onglet pour ajouter un nouveau stockage.
+      
+      <h4>Configuration des Paramètres de Connexion :</h4>
+      - Dans la fenêtre d'ajout de stockage, sélectionnez "NAS" comme type de stockage. <br>
+      - Entrez les informations requises pour connecter votre NAS Synology, telles que l'adresse IP, le nom d'utilisateur et le mot de passe associés au NAS. <br>
+      - Veeam Backup & Replication devrait être en mesure de détecter automatiquement les dossiers partagés disponibles sur le NAS.
+      
+      <h4>Validation et Finalisation :</h4>
+      - Une fois que vous avez entré les informations de connexion, cliquez sur le bouton pour valider et sauvegarder les paramètres. <br>
+      - Veeam Backup & Replication va maintenant tester la connexion avec le NAS Synology pour s'assurer qu'elle fonctionne correctement. <br>
+      - Une fois la connexion validée, vous devriez voir le NAS Synology répertorié comme un emplacement de stockage dans l'interface de Veeam Backup & Replication.
+      
+      <h4>Configuration des Tâches de Sauvegarde :</h4>     
+      - Avec votre NAS Synology connecté, vous pouvez maintenant configurer des tâches de sauvegarde dans Veeam Backup & Replication pour sauvegarder vos données sur le NAS. <br>
+      - Créez des plans de sauvegarde selon vos besoins, en spécifiant les sources de données à sauvegarder et les emplacements de sauvegarde sur le NAS Synology.
+      
+      <h4>Test et Maintenance :</h4>
+      - Effectuez des tests réguliers pour vous assurer que les sauvegardes fonctionnent correctement. <br>
+      - Surveillez l'espace disponible sur le NAS Synology et planifiez la gestion de l'espace pour éviter tout problème de capacité.
     </div>
   </section>
   <!-- ======= Footer ======= -->
