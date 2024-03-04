@@ -110,8 +110,8 @@
     </div>
   </section>
 
-  <div class="container section-title"><h2>Création de RAID</h2></div>
-  <div class="container">
+  <div class="container section-title" style="padding-top: 60px;"><h2>Création de RAID</h2></div>
+  <div class="container" style="padding-bottom: 60px;">
     <h3>Configuration du RAID</h3>
     <ul>
       <li>
@@ -163,32 +163,53 @@
     </div>
   </section>
 
-  <section>
-    <div class="container section-title"><h2>Connection avec Veeam backup & replication</h2></div>
-    <div class="container">
+
+    <div class="container section-title" style="padding-top: 60px;"><h2>Connection avec Veeam backup & replication</h2></div>
+    <div class="container" style="padding-bottom: 60px;">
       <h4>Ajout du NAS Synology dans Veeam Backup & Replication :</h4>
-      - Lancez Veeam Backup & Replication sur votre système. <br>
-      - Accédez à l'interface d'administration et cliquez sur l'onglet pour ajouter un nouveau stockage.
+      <ul>
+        <li>Lancez Veeam Backup & Replication sur votre système.</li>
+        <li>Accédez à l'interface d'administration et cliquez sur l'onglet <code>Backup Infrastructure</code> -> <code>Backup Repositories</code> puis <code>add</code> pour ajouter un nouveau stockage.</li>
+      </ul> 
       
       <h4>Configuration des Paramètres de Connexion :</h4>
-      - Dans la fenêtre d'ajout de stockage, sélectionnez "NAS" comme type de stockage. <br>
-      - Entrez les informations requises pour connecter votre NAS Synology, telles que l'adresse IP, le nom d'utilisateur et le mot de passe associés au NAS. <br>
-      - Veeam Backup & Replication devrait être en mesure de détecter automatiquement les dossiers partagés disponibles sur le NAS.
+      <ul>
+        <li>
+          <div class="slide1">
+            <div class="slide">Dans la fenêtre d'ajout de stockage, sélectionnez <code>Network attached storage</code> puis <code>SMB share</code> comme type de stockage.</div>
+            <div class="slide" style="display: flex;justify-content: center;"><img src="assets/img/ppe1/Capture10.png" alt="" style="width: 80%;"></div>
+          </div>
+        </li>
+        <li>
+          <div class="slide1">
+            <div class="slide">Entrez les informations requises pour connecter votre NAS Synology, telles que l'adresse du dossier partager, le nom d'utilisateur et le mot de passe associés au NAS.</div>
+            <div class="slide" style="display: flex;justify-content: center;"><img src="assets/img/ppe1/Capture11.png" alt="" style="width: 80%;"></div>
+          </div>
+        </li>
+      </ul>
       
-      <h4>Validation et Finalisation :</h4>
-      - Une fois que vous avez entré les informations de connexion, cliquez sur le bouton pour valider et sauvegarder les paramètres. <br>
-      - Veeam Backup & Replication va maintenant tester la connexion avec le NAS Synology pour s'assurer qu'elle fonctionne correctement. <br>
-      - Une fois la connexion validée, vous devriez voir le NAS Synology répertorié comme un emplacement de stockage dans l'interface de Veeam Backup & Replication.
-      
-      <h4>Configuration des Tâches de Sauvegarde :</h4>     
-      - Avec votre NAS Synology connecté, vous pouvez maintenant configurer des tâches de sauvegarde dans Veeam Backup & Replication pour sauvegarder vos données sur le NAS. <br>
-      - Créez des plans de sauvegarde selon vos besoins, en spécifiant les sources de données à sauvegarder et les emplacements de sauvegarde sur le NAS Synology.
+      <h4>Configuration des Tâches de Sauvegarde :</h4>    
+      <ul>
+        <li>Avec votre NAS Synology connecté, vous pouvez maintenant configurer des tâches de sauvegarde dans Veeam Backup & Replication pour sauvegarder vos données sur le NAS.</li>
+        <li>
+          <div class="slide1">
+            <div class="slide">Créez un backup Job sur le Backup Repository qu'on a créer précedament pour sauvegarder des VMs ou des fichiers.</div>
+            <div class="slide" style="display: flex;justify-content: center;"><img src="assets/img/ppe1/Capture12.png" alt=""></div>
+          </div>
+        </li>
+      </ul> 
       
       <h4>Test et Maintenance :</h4>
-      - Effectuez des tests réguliers pour vous assurer que les sauvegardes fonctionnent correctement. <br>
-      - Surveillez l'espace disponible sur le NAS Synology et planifiez la gestion de l'espace pour éviter tout problème de capacité.
+      <ul>
+        <li>
+          <div class="slide1">
+            <div class="slide">Effectuez des tests réguliers pour vous assurer que les sauvegardes fonctionnent correctement.</div>
+            <div class="slide" style="display: flex;justify-content: center;"><img src="assets/img/ppe1/Capture13.png" alt=""></div>
+          </div>
+        </li>
+      </ul>
     </div>
-  </section>
+
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
