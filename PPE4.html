@@ -56,15 +56,14 @@
       <div class="container">
         <h3>Contexte de ce Projet:</h3>
         <p>Le déploiement de systèmes d'exploitation sur plusieurs machines peut être fastidieux et chronophage, en particulier lorsqu'il s'agit de configurer chaque machine individuellement à l'aide de clés USB ou de supports physiques. Dans ce contexte, le boot PXE (Preboot Execution Environment) offre une solution efficace en permettant le démarrage des machines à partir d'un serveur distant via le réseau.</p>
-        <div class="slide1">
+        <h4>L’organisation de projet:</h4>
+        <div class="slide1" style="align-items: start;">
           <div class="slide">
-            <h4>L’organisation de projet:</h4>
             <ul>
               <li><strong>Moyens et Techniques :</strong>
                 <ol>
                   <li>Utilisation du rôle de service de déploiement Windows (WDS) de Microsoft Windows Server pour le serveur PXE.</li>
                   <li>Création d'images d'installation personnalisées pour les différents systèmes d'exploitation à déployer. Ces images sont préparées avec les logiciels, pilotes et configurations spécifiques nécessaires pour chaque environnement utilisateur.</li>
-                  <li>Configuration du BIOS des machines clientes pour activer le démarrage PXE.</li>
                 </ol>
               </li>        
             </ul>
@@ -73,20 +72,12 @@
             <ul>
               <li><strong>Référentiels et Directives :</strong>
                 <ol>
-                  <li></li>
-                  <li></li>
+                  <li>S'assurer que le matériel des machines clientes est compatible avec le démarrage PXE </li>
+                  <li>La création d'une image ISO générale pour le déploiment sur tout les appareils.</li>
                 </ol>
               </li>
             </ul>
           </div>
-        </div>
-        <div class="container" style="display: flex;justify-content: center;">
-          <li><strong>Contraintes du Projet :</strong>
-            <ol>
-              <li></li>
-              <li></li>
-            </ol>
-          </li>
         </div>
       </div>
     </section>
