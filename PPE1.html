@@ -40,21 +40,21 @@
 
   <section>
     <div class="container new section-title">
-      <h1>NAS Synliogy de Backup</h1>
-      <p>Ce projet implique l'installation, la configuration et l'intégration d'un NAS Synliogy dans un environnement réseau, avec la mise en place de RAID et l'utilisation de Veeam Backup & Replication</p>
+      <h1>NAS Synology de Backup</h1>
+      <p>Ce projet implique l'installation, la configuration et l'intégration d'un NAS Synology dans un environnement réseau, avec la mise en place de RAID et l'utilisation de Veeam Backup & Replication</p>
     </div>
     <div class="container">
-      <h3>Contexte de ce Projet:</h3>
-      <p>Le projet a été initié après avoir donné la priorité à la modernisation de notre infrastructure et à la consolidation de nos anciens NAS, qui disposait de faible capacité.</p>
+      <h3>Contexte de ce projet:</h3>
+      <p>Le projet a été initié après avoir donné la priorité à la modernisation de notre infrastructure et à la consolidation de nos anciens NAS, qui disposait de faibles capacités.</p>
       <h4>L’organisation de projet:</h4>
       <div class="slide1" style="align-items: start;">
         <div class="slide">
           <ul>
             <li><strong>Moyens et Techniques :</strong>
               <ol>
-                <li>Utilisation d'un NAS Synliogy pour le stockage et la gestion des données. </li>
+                <li>Utilisation d'un NAS Synology pour le stockage et la gestion des données. </li>
                 <li>Utilisation de Veeam Backup & Replication pour les tâches de sauvegarde et de réplication des données.</li>
-                <li>Utilisation du proticol RAID pour assurer la redondance et la fiabilité des données.</li>
+                <li>Utilisation du protocole RAID pour assurer la redondance et la fiabilité des données.</li>
               </ol>
             </li>        
           </ul>
@@ -78,7 +78,7 @@
     <div class="container">
       <h6>Les compétences mises en œuvre dans ce projet de déploiement d'un NAS Synology de sauvegarde, en utilisant Veeam Backup & Replication, ainsi que la configuration du RAID, incluent :</h6>
       <ul>
-        <li>Connaissance des Solutions de Stockage : Comprendre les différents types de stockage disponibles, y compris les NAS, et savoir comment les mettre en œuvre pour répondre aux besoins spécifiques de l'entreprise.</li>
+        <li>Connaissance des solutions de stockage : Comprendre les différents types de stockage disponibles, y compris les NAS, et savoir comment les mettre en œuvre pour répondre aux besoins spécifiques de l'entreprise.</li>
         <li>Compétences en Configuration Matérielle : Installer physiquement le NAS, insérer et configurer les disques durs, et configurer le RAID pour assurer la redondance et la fiabilité des données.</li>
         <li>Familiarité avec les Outils de Sauvegarde : Utiliser Veeam Backup & Replication pour configurer des tâches de sauvegarde et de réplication des données, ainsi que pour surveiller et gérer ces sauvegardes de manière efficace.</li>
       </ul>
@@ -96,7 +96,7 @@
         <div class="slide">
           <h3>Étape 1 : Placement et Connexions</h3>  
           <ul>
-            <li>Placez le NAS Synliogy dans un endroit approprié, de préférence dans un emplacement bien ventilé.</li>
+            <li>Placez le NAS Synology dans un endroit approprié, de préférence dans un emplacement bien ventilé.</li>
             <li>Connectez le NAS à deux sources d'alimentation : une normale et une ondulée pour assurer une alimentation continue et stable.</li>
             <li>Assurez-vous que le NAS est connecté à un réseau local via un câble Ethernet.</li>
           </ul>
@@ -116,16 +116,16 @@
     <div class="container">
       <h3>Pour la mise en réseau il suffit :</h3>
       <ul>
-        <li>Connectez le NAS Synliogy à votre réseau local à l'aide d'un câble Ethernet.</li>
+        <li>Connectez le NAS Synology à votre réseau local à l'aide d'un câble Ethernet.</li>
         <li>
           <div class="slide1">
-            <div class="slide">Configurez les paramètres réseau du NAS via Synliogy Assistant pour lui attribuer une adresse IP statique compatible avec votre réseau.</div>
+            <div class="slide">Configurez les paramètres réseau du NAS via Synology Assistant pour lui attribuer une adresse IP statique compatible avec votre réseau.</div>
             <div class="slide"><img src="assets/img/ppe1/Capture5.png" alt=""></div>
           </div>
         </li>
         <li>
           <div class="slide1">
-            <div class="slide">Pour finir aller dans <code>Panneau de configuration</code> -> <code>Réseau</code> pour configurez les autre interface réseaux si nécessaire.</div>
+            <div class="slide">Pour finir aller dans <code>Panneau de configuration</code> -> <code>Réseau</code> pour configurer les autres interfaces réseaux si nécessaire.</div>
             <div class="slide"><img src="assets/img/ppe1/Capture6.png" alt=""></div>
           </div>
         </li>
@@ -144,7 +144,7 @@
           <div class="slide"><img src="assets/img/ppe1/Capture1.png" alt=""></div>
         </div>
       </li>
-      <li>Suivez les instructions pour créer un nouveau vliume RAID.</li>
+      <li>Suivez les instructions pour créer un nouveau volume RAID.</li>
       <li>
         <div class="slide1">
           <div class="slide">Choisissez le niveau de RAID approprié en fonction de nos besoins en redondance et en performances (RAID 0, RAID 1, RAID 5, RAID 6, etc.).</div>
@@ -159,11 +159,10 @@
       </li>
       <li>
         <div class="slide1">
-          <div class="slide">Pour finir créer un vliume avec le RAID qui vient d'être créer</div>
+          <div class="slide">Pour finir créer un volume avec le RAID qui vient d'être crée</div>
           <div class="slide"><img src="assets/img/ppe1/Capture7.png" alt=""></div>
          </div>
       </li>
-      
     </ul>
   </div>   
 
@@ -173,13 +172,13 @@
       <ul>
         <li>
           <div class="slide1">
-            <div class="slide">Dans <code>Panneau de configuration</code> -> <code>Dossier partagé</code> Créer un nouveau dossier partagé en selectionnant le vliume créer et suiver l'assistant de création.</div>
+            <div class="slide">Dans <code>Panneau de configuration</code> -> <code>Dossier partagé</code> Créer un nouveau dossier partagé en sélectionnant le volume créer et suivre l'assistant de création.</div>
             <div class="slide"><img src="assets/img/ppe1/Capture8.png" alt=""></div>
            </div>
         </li>
         <li>
           <div class="slide1">
-            <div class="slide">Une fois créer donner les droit au utilisateur voulu puis vérifier ca création dans <code>File Station</code> </div>
+            <div class="slide">Une fois créer donner les droits aux utilisateurs voulus puis vérifier sa création dans <code>File Station</code> </div>
             <div class="slide"><img src="assets/img/ppe1/Capture9.png" alt=""></div>
            </div>
         </li>
@@ -190,7 +189,7 @@
 
     <div class="container section-title" style="padding-top: 60px;"><h2>Connection avec Veeam backup & replication</h2></div>
     <div class="container" style="padding-bottom: 60px;">
-      <h4>Ajout du NAS Synliogy dans Veeam Backup & Replication :</h4>
+      <h4>Ajout du NAS Synology dans Veeam Backup & Replication :</h4>
       <ul>
         <li>Lancez Veeam Backup & Replication sur votre système.</li>
         <li>Accédez à l'interface d'administration et cliquez sur l'onglet <code>Backup Infrastructure</code> -> <code>Backup Repositories</code> puis <code>add</code> pour ajouter un nouveau stockage.</li>
@@ -206,7 +205,7 @@
         </li>
         <li>
           <div class="slide1">
-            <div class="slide">Entrez les informations requises pour connecter votre NAS Synliogy, telles que l'adresse du dossier partager, le nom d'utilisateur et le mot de passe associés au NAS.</div>
+            <div class="slide">Entrez les informations requises pour connecter votre NAS Synology, telles que l'adresse du dossier partager, le nom d'utilisateur et le mot de passe associés au NAS.</div>
             <div class="slide" style="display: flex;justify-content: center;"><img src="assets/img/ppe1/Capture11.png" alt="" style="width: 80%;"></div>
           </div>
         </li>
@@ -214,10 +213,10 @@
       
       <h4>Configuration des Tâches de Sauvegarde :</h4>    
       <ul>
-        <li>Avec votre NAS Synliogy connecté, vous pouvez maintenant configurer des tâches de sauvegarde dans Veeam Backup & Replication pour sauvegarder vos données sur le NAS.</li>
+        <li>Avec votre NAS Synology connecté, vous pouvez maintenant configurer des tâches de sauvegarde dans Veeam Backup & Replication pour sauvegarder vos données sur le NAS.</li>
         <li>
           <div class="slide1">
-            <div class="slide">Créez un backup Job sur le Backup Repository qu'on a créer précedament pour sauvegarder des VMs ou des fichiers.</div>
+            <div class="slide">Créez un backup Job sur le <code>Backup Repository</code> qu'on a crée précédemment pour sauvegarder des VMs ou des fichiers.</div>
             <div class="slide" style="display: flex;justify-content: center;"><img src="assets/img/ppe1/Capture12.png" alt=""></div>
           </div>
         </li>
