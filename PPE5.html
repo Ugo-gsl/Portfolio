@@ -101,8 +101,8 @@
       <h3>Étape 1 : Prérequis</h3>
       <ul class="custom-list">
         <li>Un serveur Linux</li>
-        <li>Accès en tant que superutilisateur <code>su -</code></li>
-        <li>SFTP: On peut copier des fichier d'autre machine avec sftp <code>sftp user0@172.16.246.10</code> tant que ssh est installer sur la machine a distance</li>
+        <li>Accès en tant que super-utilisateur <code>su -</code></li>
+        <li>SFTP: On peut copier des fichiers d'autres machines avec sftp <code>sftp user0@172.16.246.10</code> tant que ssh est installé sur la machine à distance</li>
       </ul>
 
       <h3>Étape 2 : Installer et configurer Nginx</h3>
@@ -148,7 +148,7 @@
         <li>3.2 Installez PHP et les extensions requises : <code>apt install php-fpm php-mysql</code></li>
       </ul>
 
-      <h3>Étape 4 : Télécharger et installer WordPress</h3>
+      <h3>Étape 4 : Télécharger et installé WordPress</h3>
       <ul class="custom-list">
         <li>4.1 Accédez au répertoire /var/www/ : <code>cd /var/www/</code></li>
         <li>4.2 Téléchargez la dernière version de WordPress depuis le site officiel (https://wordpress.org/) : <code>wget https://wordpress.org/latest.zip</code></li>
@@ -172,8 +172,8 @@ chmod -R 755 /var/www/EMXPnw52</pre></li></ul>
           </ul>
         </div>
         <div class="slide">
-          <h3>Étape 6 : Configuration Base de donnée manuellement (facultatif)</h3>
-          <p>La Base de donnée doit ce connecter automatiquement quand on lance l'interface graphique de Wordpress mais certaine fois cela ne fonctione pas.</p>
+          <h3>Étape 6 : Configuration de la base de données manuellement (facultatif)</h3>
+          <p>La Base de données doit se connecter automatiquement quand on lance l'interface graphique de Wordpress mais certaines fois cela ne fonctione pas.</p>
           <ul class="custom-list">
             <li>6.1 Renommez le fichier de configuration WordPress : <br><code>mv /var/www/EMXPnw52/wp-config-sample.php /var/www/EMXPnw52/wp-config.php</code></li>
             <li>6.2. Ouvrez le fichier <code>wp-config.php</code>: <pre>nano /var/www/EMXPnw52/wp-config.php</pre></li>
@@ -195,12 +195,12 @@ define( 'WP_DEBUG', true );</pre>
       <h3>Étape 7 : Accéder à WordPress</h3>
       <ul class="custom-list">
         <li>7.1 Ouvrez votre navigateur Web et accédez à l'URL suivante : <code>EMXPnw52.eval244.yajako.info.lan</code></li>
-        <li>7.2 Suivez les instructions à l'écran pour configurer votre site WordPress, créer un compte administrateur, etc</li>
+        <li>7.2 Suivez les instructions à l'écran pour configurer votre site WordPress, créer un compte administrateur, etc.</li>
         <img src="assets/img/Wordpress/300px-login_form.png" alt="" style="margin-left: 37%;">
       </ul>
 
       <div class="container section-title"><h2>3. Conclusion</h2></div>
-      <p>Ce projet est intéressant car il va me service de base pour la compréhention des serveur web, bases de donnée  et plus globalement Linux.</p>
+      <p>Ce projet est intéressant car il va me service de base pour la compréhension des serveurs web, bases de données et plus globalement Linux.</p>
     </div>
 
   <!-- ======= Footer ======= -->

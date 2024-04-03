@@ -39,16 +39,16 @@
   <section>
     <div class="container new">
       <h1>Configuration réseau pour un nouveau site</h1>
-      <p>Ce projet a consisté à gérer un projet d'infrastructure réseau de A à Z. Suite a une réhorganisation de la médiathèque tout le système réseaux à du être rénover</p><br>
+      <p>Ce projet a consisté à gérer un projet d'infrastructure réseau d'A à Z. Suite à une réorganisation de la médiathèque tout le système réseaux a dû être rénové</p><br>
     </div>
     <div class="container">
       <h3>Les 5 Phases du déploiement de l'infrastructure informatique et des réseaux : </h3><br>
       <ul class="custom-list">
         <li>Installation serveur Webkiosk</li>
         <li>Installation des PC</li>
-        <li>Branchement et configuration du matériel réseaux (routeur, switch, etc.)</li>
+        <li>Branchement et configuration du matériel réseau (routeur, switch, etc.)</li>
         <li>Configuration Antenne WIFI</li>
-        <li>Configuration imprimente</li>
+        <li>Configuration imprimante</li>
       </ul>
     </div>
   </section>
@@ -76,8 +76,8 @@
           <ul>
             <li><strong>Référentiels et Directives :</strong>
               <ol>
-                <li>La normisation de l'installation en respectant une procédure de configuration </li>
-                <li>L'absance de service actif dans le batiment oblige la complexification des tests pour éviter tout problème le jours d'ouverture.</li>
+                <li>La normalisation de l'installation en respectant une procédure de configuration </li>
+                <li>L'absence de service actif dans le bâtiment oblige la complexification des tests pour éviter tout problème le jour de réouverture.</li>
               </ol>
             </li>
           </ul>
@@ -107,33 +107,33 @@
   </div>
   <div class="container">
     <h3>Serveur Webkiosk</h3>
-    <p>Le serveur Webkiosk et un raspberry pi. La configuration du serveur webkiosk et d'impression on directment configurer par la sociéter.</p>
-    <p>De notre coter il nous reste plus qu'a le rélier a notre réseaux EPN(public) puis pour les antennes en faire re sortir un autre sous-réseaux d'une autre carte.</p>
-    <p>Pour finir en sortie du nouveaux réseaux on rajoute un switch qui vas nous servire a connecter toute les antennes WIFI (Webkiosk)</p>
+    <p>Le serveur Webkiosk et un raspberry pi. La configuration du serveur webkiosk et d'impression on directment été configurer par la sociéter.</p>
+    <p>De notre coter il nous reste plus qu'a le relier à notre réseau EPN(public) puis pour les antennes en faire re sortir un autre sous-réseau d'une autre carte.</p>
+    <p>Pour finir en sortie du nouveau réseau on rajoute un switch qui va nous servir à connecter toutes les antennes WIFI (Webkiosk)</p>
   </div>
   
   <div class="container section-title"><h2>2. Installation des PC</h2></div>
   <div class="container">
     <h3>PC dans notre domaine (les agents mairie) </h3>
-    <p>Après la mise en route du PC plusieur points important sont a faire avant de le donner à un agent:</p>
+    <p>Après la mise en route du PC plusieurs points importants sont à faire avant de le donner à un agent:</p>
     <ul class="custom-list">
-      <li>Créer un compte local sur le PC du services informatique</li>
-      <li>Lui changer sont nom et se réferer a la liste de nos appareil</li>
+      <li>Créer un compte local sur le PC pour le service informatique</li>
+      <li>Lui changer son nom et se référer à la liste de nos appareils</li>
       <li>
         <div class="slide1">
-          <div class="slide"><p>Joindre le PC dans le dommaine</p></div>
+          <div class="slide"><p>Joindre le PC dans le domaine</p></div>
           <div class="slide" style="display: flex;justify-content: center;"><img src="assets/img/new-site/Capture.png" alt="" style="height: 30vh;width: auto;"></div>
         </div>
       </li>
       <li>
         <div class="slide1">
-          <div class="slide"><p>Ajouter un compte admin du dommaine</p></div>
+          <div class="slide"><p>Ajouter un compte admin du domaine</p></div>
           <div class="slide"><img src="assets/img/new-site/Capture1.PNG" alt=""></div>
         </div>
       </li>
       <li>
         <div class="slide1">
-          <div class="slide"><p>Installer les application et logiciel métier</p></div>
+          <div class="slide"><p>Installer les applications et logiciel métier</p></div>
           <div class="slide"><img src="assets/img/new-site/Capture d'écran 2024-02-01 155257.png" alt=""></div>
         </div>
       </li>
@@ -141,10 +141,10 @@
     </ul>
     <h3>PC hors domaine (Public)</h3>
     <ul class="custom-list">
-      <li>Créer un compte local sur le PC du services informatique</li>
-      <li>Lui changer sont nom par rapport au site ou il est installer</li>
-      <li>Installer les application et logiciel métier</li>
-      <li>Pour finir soit le mettre en mode kios pour la consultaion des catalogue de la médiathèque soit installer un programme appeler "Webkiosk" pour la gestion des poste public</li>
+      <li>Créer un compte local sur le PC pour le service informatique</li>
+      <li>Lui changer son nom par rapport au site où il est installé</li>
+      <li>Installer les applications et logiciel métier</li>
+      <li>Pour finir soit le mettre en mode kios pour la consultation des catalogues de la médiathèque soit installer un programme appeler "Webkiosk" pour la gestion des postes publics</li>
     </ul>
     <div class="slide1">
       <div class="slide"><img src="assets/img/new-site/Capture2.PNG" alt=""></div>
@@ -155,18 +155,18 @@
   <div class="container section-title"><h2>3. Configuration du matériel réseaux</h2></div>
   <div class="container">
     <h3>Réseaux</h3>
-    <p>Dans la Mairie le réseaux Mairie et Public sont 2 réseaux séparer physiquement pour ce nouveaux site j'ai décider de les réunir sur un seul switch séparer par de VLAN comme représenter sur le schémat.</p>
+    <p>Dans la Mairie les réseaux Mairie et Public sont 2 réseaux séparer physiquement pour ce nouveau site j'ai décidé de les réunir sur un seul switch séparer par de VLAN comme représenter sur le schéma.</p>
     <img src="assets/img/new-site/Capture d'écran 2024-02-01 170142.png" alt="" style="margin-left: 30%;">
 
     <div class="slide1" style="align-items: start;">
       <div class="slide">
         <h3>Switch</h3>
-        <p>Ensuite les switchs sont configurer sur le réseaux mairie:</p>
+        <p>Ensuite les switchs sont configuré sur les réseaux mairie:</p>
         <ul class="custom-list">
-          <li>Modifier IP sur une plage réserver</li>
+          <li>Modifier IP sur une plage réservée</li>
           <li>Rajout sur la topology réseaux</li>
         </ul>
-        <p>De plus avec une nouvelle politique que j'ai mit en place sur les switch qui est de:</p>
+        <p>De plus avec une nouvelle politique que j'ai mise en place sur les switchs qui sont de:</p>
         <ul class="custom-list">
           <li>Rajouter 802.1x</li>
           <li>Modification des mots de passes robuste</li>
@@ -177,7 +177,7 @@
       </div>
       <div class="slide">
         <h3>Brasage</h3>
-        <p>Pour finir relier chaque noeux du bandeaux a un port avec le bon VLAN</p>
+        <p>Pour finir relier chaque noeud  du bandeau à un port avec le bon VLAN</p>
       </div>
     </div>    
   </div>
@@ -186,18 +186,18 @@
   <div class="container section-title"><h2>4. Configuration Antenne WIFI</h2></div>
   <div class="container">
     <h3>Antenne Wifi STC (Mairie)</h3>
-    <p>Les antenne wifi du personnel sont pré configurer par notre fourniseur il ne reste plus qu'a les brancher sur notre réseaux avce le VLAN Antenne.</p>
+    <p>Les antennes wifi du personnel son pré configuré par notre fournisseur il ne reste plus qu'à les brancher sur notre réseau avec le VLAN Antenne.</p>
 
     <h3>Antenne Wifi Webkiosk (Public)</h3>
-    <p>Les antennes Webkiosk sont connecter au serveur webkiosk en amont</p>
+    <p>Les antennes Webkiosk sont connectées au serveur webkiosk en amont</p>
     <p>Pour configurer les antennes il suffit de :</p>
     <ul class="custom-list">
-      <li>Se connecter sur l'antenne via l'ip par default (192.168.1.2) puis la modifier</li>
-      <li>Changer son mdp et sont SSID (Webkiosk)</li>
+      <li>Se connecter sur l'antenne via l'IP par défaut (192.168.1.2) puis la modifier</li>
+      <li>Changer son mdp et son SSID (Webkiosk)</li>
       <li>Pour finir lui affecter une IP fixe</li>
     </ul>
     <p>Il faut ensuite enlever les securité de la borne afin qu’elle ne demande pas de mdp à la connexion puisque c’est webkiosk qui s’occupe de l’authentification</p>
-    <p>Les pc qui se connectent au wifi webkiosk adoptent une ip 192.168.30.xxx</p>
+    <p>Les pc qui se connectent au wifi webkiosk adoptent une IP 192.168.30.xxx</p>
   </div>  
   </section>
   
@@ -205,13 +205,13 @@
   <div class="container section-title"><h2>5. Configuration imprimente</h2></div>
   <div class="container">
     <h3>Imprimente STC (Mairie)</h3>
-    <p>Pour connecter les nouvelle imprimente à notre réseaux il suffit de:</p>
+    <p>Pour connecter les nouvelles imprimante à notre réseau il suffit de:</p>
     <ul class="custom-list">
-      <li>Lui affecter un IP fixe qui doit être dans la range des IP réservé pour les imprimante.</li>
+      <li>Lui affecter un IP fixe qui doit être dans la range des IP réservé pour les imprimantes.</li>
       <li>L'enregistrer dans notre inventaire</li>
       <li>
         <div class="slide1">
-          <div class="slide">Puis la connecter a notre serveur d'impression dans <code>genstion de l'impression</code> -> <code>Ajouter imprimante</code> -> <code>TCP/IP</code> -> <code>Ajouter lIP comme sur la photo</code></div>
+          <div class="slide">Puis la connecter à notre serveur d'impression dans <code>gestion de l'impression</code> -> <code>Ajouter imprimante</code> -> <code>TCP/IP</code> -> <code>Ajouter lIP comme sur la photo</code></div>
           <div class="slide"><img src="assets/img/new-site/Capture d'écran 2024-02-01 162120.png" alt=""></div>
         </div>
       </li>
@@ -219,11 +219,11 @@
 
     <h3>Imprimente Webkiosk (Public)</h3>
     <ul class="custom-list">
-      <li>Lui affecter un IP fixe qui est dans le sous-réseaux</li>
+      <li>Lui affecter un IP fixe qui est dans le bon sous-réseau</li>
       <li>Se connecter au serveur d'impression de Webkiosk pour la rajouter</li>
       <li>
         <div class="slide1">
-          <div class="slide">Puis la rajouter aussi dans l'interface graphique de webkiosk qui permettera de la distribuer au utilisateur public</div>
+          <div class="slide">Puis la rajouter aussi dans l'interface graphique de webkiosk qui permettra de la distribuer aux utilisateurs publics</div>
           <div class="slide"><img src="assets/img/new-site/Capture d'écran 1.png" alt=""></div>
         </div>
       </li>
@@ -249,7 +249,7 @@
       <li>STC Mairie : Assurez-vous de la connexion au réseau et du bon fonctionnement d'impression.</li>
       <li>Webkiosk Public : Vérifiez l'accessibilité et la fonctionnalité pour les utilisateurs publics.</li>
     </ul>
-    <p>Un test de charge global pour simuler l'usage quotidien est également recommandé.</p>
+    <p>Un test de charge globale pour simuler l'usage quotidien est également recommandé.</p>
   </div>
   </section>
 
