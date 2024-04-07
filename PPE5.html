@@ -51,15 +51,15 @@
     <div class="container">
       <h3>Contexte de ce Projet:</h3>
       <p>Le déploiement d'un serveur WordPress est une initiative essentielle pour de nombreuses entreprises et organisations qui cherchent à établir une présence en ligne robuste et dynamique. Dans ce cas précis, l'objectif est de fournir une plateforme stable et sécurisée pour héberger des sites web WordPress, ce qui peut être crucial pour des blogs, des sites d'entreprise, des portfolios en ligne, ou d'autres applications web. La nécessité d'avoir un site web bien construit et fonctionnel est devenue incontournable dans le paysage numérique moderne. Pour de nombreuses entreprises, WordPress est une solution populaire en raison de sa flexibilité, de sa convivialité et de sa large communauté de développeurs.</p>
-      <div class="slide1">
+      <h4>L’organisation de projet:</h4>
+      <div class="slide1" style="align-items: start;">
         <div class="slide">
-          <h4>L’organisation de projet:</h4>
           <ul>
             <li><strong>Moyens et Techniques :</strong>
               <ol>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>Utilisation du serveur web Nginx pour servir les fichiers web.</li>
+                <li>Configuration de MySQL pour gérer la base de données de WordPress.</li>
+                <li>Utilisation de PHP comme langage de script côté serveur, étant donné que WordPress est écrit en PHP</li>
               </ol>
             </li>        
           </ul>
@@ -68,20 +68,12 @@
           <ul>
             <li><strong>Référentiels et Directives :</strong>
               <ol>
-                <li></li>
-                <li></li>
+                <li>Suivre les recommandations de performance pour optimiser les performances du serveur Nginx, MySQL et PHP.</li>
+                <li>Assurer la compatibilité entre les différentes versions des logiciels utilisés (Nginx, MySQL, PHP) pour éviter les conflits et les problèmes de compatibilité.</li>
               </ol>
             </li>
           </ul>
         </div>
-      </div>
-      <div class="container" style="display: flex;justify-content: center;">
-        <li><strong>Contraintes du Projet :</strong>
-          <ol>
-            <li></li>
-            <li></li>
-          </ol>
-        </li>
       </div>
     </div>
   </section>
@@ -90,15 +82,13 @@
     <div class="container">
       <h3>Compétences Mises en Œuvre :</h3>
       <ul>
-        <li>Administration Système Linux</li>
-        <li>Administration de Serveurs Web</li>
-        <li>Gestion de Base de Données</li>
-        <li>Déploiement d'Applications Web</li>
-        <li>Développement Web</li>
-        <li>Sécurité Informatique</li>
-        <li>Test et Débogage</li>
+        <li>Gestion des serveurs web et bases de données avec l'Installation et la configuration de Nginx pour servir les fichiers WordPress, ainsi que MySQL pour gérer la base de données.</li>
+        <li>Administration système Linux avec la gestion du serveur, la configuration des utilisateurs et les permissions.</li>
       </ul>
       <p>En combinant ces compétences, l'équipe chargée du déploiement du serveur WordPress est en mesure de créer une infrastructure web fiable, sécurisée et performante, répondant aux besoins spécifiques de l'organisation et de ses utilisateurs finaux.</p>
+    </div>
+    <div class="container" style="display: flex; justify-content: center;" >
+      <img src="assets/img/Wordpress/wordpress-en-linux.jpg" alt="" style="width: 40%;">
     </div>
   </section>
   
@@ -111,8 +101,8 @@
       <h3>Étape 1 : Prérequis</h3>
       <ul class="custom-list">
         <li>Un serveur Linux</li>
-        <li>Accès en tant que superutilisateur <code>su -</code></li>
-        <li>SFTP: On peut copier des fichier d'autre machine avec sftp <code>sftp user0@172.16.246.10</code> tant que ssh est installer sur la machine a distance</li>
+        <li>Accès en tant que super-utilisateur <code>su -</code></li>
+        <li>SFTP: On peut copier des fichiers d'autres machines avec sftp <code>sftp user0@172.16.246.10</code> tant que ssh est installé sur la machine à distance</li>
       </ul>
 
       <h3>Étape 2 : Installer et configurer Nginx</h3>
@@ -158,7 +148,7 @@
         <li>3.2 Installez PHP et les extensions requises : <code>apt install php-fpm php-mysql</code></li>
       </ul>
 
-      <h3>Étape 4 : Télécharger et installer WordPress</h3>
+      <h3>Étape 4 : Télécharger et installé WordPress</h3>
       <ul class="custom-list">
         <li>4.1 Accédez au répertoire /var/www/ : <code>cd /var/www/</code></li>
         <li>4.2 Téléchargez la dernière version de WordPress depuis le site officiel (https://wordpress.org/) : <code>wget https://wordpress.org/latest.zip</code></li>
@@ -182,8 +172,8 @@ chmod -R 755 /var/www/EMXPnw52</pre></li></ul>
           </ul>
         </div>
         <div class="slide">
-          <h3>Étape 6 : Configuration Base de donnée manuellement (facultatif)</h3>
-          <p>La Base de donnée doit ce connecter automatiquement quand on lance l'interface graphique de Wordpress mais certaine fois cela ne fonctione pas.</p>
+          <h3>Étape 6 : Configuration de la base de données manuellement (facultatif)</h3>
+          <p>La Base de données doit se connecter automatiquement quand on lance l'interface graphique de Wordpress mais certaines fois cela ne fonctione pas.</p>
           <ul class="custom-list">
             <li>6.1 Renommez le fichier de configuration WordPress : <br><code>mv /var/www/EMXPnw52/wp-config-sample.php /var/www/EMXPnw52/wp-config.php</code></li>
             <li>6.2. Ouvrez le fichier <code>wp-config.php</code>: <pre>nano /var/www/EMXPnw52/wp-config.php</pre></li>
@@ -205,12 +195,12 @@ define( 'WP_DEBUG', true );</pre>
       <h3>Étape 7 : Accéder à WordPress</h3>
       <ul class="custom-list">
         <li>7.1 Ouvrez votre navigateur Web et accédez à l'URL suivante : <code>EMXPnw52.eval244.yajako.info.lan</code></li>
-        <li>7.2 Suivez les instructions à l'écran pour configurer votre site WordPress, créer un compte administrateur, etc</li>
+        <li>7.2 Suivez les instructions à l'écran pour configurer votre site WordPress, créer un compte administrateur, etc.</li>
         <img src="assets/img/Wordpress/300px-login_form.png" alt="" style="margin-left: 37%;">
       </ul>
 
       <div class="container section-title"><h2>3. Conclusion</h2></div>
-      <p>Ce projet est intéressant car il va me service de base pour la compréhention des serveur web, bases de donnée  et plus globalement Linux.</p>
+      <p>Ce projet est intéressant car il va me service de base pour la compréhension des serveurs web, bases de données et plus globalement Linux.</p>
     </div>
 
   <!-- ======= Footer ======= -->

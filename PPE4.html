@@ -43,7 +43,7 @@
     </div>
     <div class="container new">
         <p>Le boot PXE pour Preboot Execution Environment est un protocole de démarrage réseau qui permet à un ordinateur local de démarrer à partir de données situées sur un serveur distant, plutôt que de démarrer à partir du contenu de la clé USB.</p>    
-        <p>Si l'on a besoin d'installer Windows 11 sur 20 machines différentes, plutôt que d'utiliser 20 clés USB ou de faire les machines une par une si l'on a qu'une seule clé USB, on va effectuer un boot PXE sur chaque machine et elles vont récupérer les sources d'installation depuis notre serveur.</p>
+        <p>Si l'on a besoin d'installer Windows 11 sur 20 machines différentes, plutôt que d'utiliser 20 clés USB ou de faire les machines une par une si l'on n'a qu'une seule clé USB, on va effectuer un boot PXE sur chaque machine et elles vont récupérer les sources d'installation depuis notre serveur.</p>
     </div>
     <div class="container" style="display: flex;justify-content: space-around;margin-top: 40px;">
       <img src="assets/img/pxe/Schema-Deploiement-par-cle-USB.png" alt="" width="40%" height="auto">
@@ -56,15 +56,14 @@
       <div class="container">
         <h3>Contexte de ce Projet:</h3>
         <p>Le déploiement de systèmes d'exploitation sur plusieurs machines peut être fastidieux et chronophage, en particulier lorsqu'il s'agit de configurer chaque machine individuellement à l'aide de clés USB ou de supports physiques. Dans ce contexte, le boot PXE (Preboot Execution Environment) offre une solution efficace en permettant le démarrage des machines à partir d'un serveur distant via le réseau.</p>
-        <div class="slide1">
+        <h4>L’organisation de projet:</h4>
+        <div class="slide1" style="align-items: start;">
           <div class="slide">
-            <h4>L’organisation de projet:</h4>
             <ul>
               <li><strong>Moyens et Techniques :</strong>
                 <ol>
-                  <li>Utilisation du rôle de service de déploiement Windows (WDS) de Microsoft Windows Server pour le serveur PXE.</li>
-                  <li>Création d'images d'installation personnalisées pour les différents systèmes d'exploitation à déployer. Ces images sont préparées avec les logiciels, pilotes et configurations spécifiques nécessaires pour chaque environnement utilisateur.</li>
-                  <li>Configuration du BIOS des machines clientes pour activer le démarrage PXE.</li>
+                  <li>Utilisation du rôle de service de déploiement Windows (WDS) de Microsoft Windows Serveur pour le serveur PXE.</li>
+                  <li>Création d'images d'installation personnalisée pour les différents systèmes d'exploitation a déployé. Ces images sont préparées avec les logiciels, pilotes et configurations spécifiques nécessaires pour chaque environnement utilisateur.</li>
                 </ol>
               </li>        
             </ul>
@@ -73,20 +72,12 @@
             <ul>
               <li><strong>Référentiels et Directives :</strong>
                 <ol>
-                  <li></li>
-                  <li></li>
+                  <li>S'assurer que le matériel des machines clientes est compatible avec le démarrage PXE </li>
+                  <li>La création d'une image ISO générale pour le déploiement sur tous les appareils.</li>
                 </ol>
               </li>
             </ul>
           </div>
-        </div>
-        <div class="container" style="display: flex;justify-content: center;">
-          <li><strong>Contraintes du Projet :</strong>
-            <ol>
-              <li></li>
-              <li></li>
-            </ol>
-          </li>
         </div>
       </div>
     </section>
@@ -94,21 +85,21 @@
       <div class="container">
         <h3>Compétences Mises en Œuvre :</h3>
         <ul>
-          <li>Administration de Serveurs Windows</li>
-          <li>Réseaux Informatiques</li>
-          <li>Gestion des Images de Démarrage et d'Installation</li>
-          <li>Déploiement et Test</li>
-          <li>Sécurité et Intégration</li>
-          <li>Automatisation et Personnalisation</li>
+          <li>Compétences en administration système avec l'installation, la configuration et la gestion des services et les utilisateurs.</li>
+          <li>Maîtrise des systèmes d'exploitation en étudiant l'OS pris en charge et les scripts pour l'automatisation.</li>
+          <li>Connaissance des réseaux avec l'utilisation des protocoles réseau comme DHCP, DNS et TFTP.</li>
         </ul>
-        <p>En résumé, la mise en place d'un serveur PXE nécessite des compétences approfondies en administration système, réseaux informatiques et déploiement de systèmes d'exploitation. Cette solution offre une gestion centralisée et efficace des installations sur un grand nombre de machines, ce qui représente un avantage significatif en termes de gain de temps et de productivité dans les environnements informatiques d'entreprise.</p>
+        <p>Ces compétences me permettent de déployer efficacement des systèmes d'exploitation sur un réseau via un serveur PXE.</p>
+      </div>
+      <div class="container" style="display: flex; justify-content: center;">
+        <img src="assets/img/pxe/Serveur10.jpg" alt="" style="width: 40%;">
       </div>
     </section>
 
 
     <div class="container section-title"><h2>1. Objectifs</h2></div>
     <div class="container">
-      <p>L'objectif est de pouvoir lancer les PC sans avoir besoin de booter sur la clef (Ce qui peut entrainer des modification dans le BIOS) en utilisant seulement le réseau et un cable Ethernet comme matériel de plus nous pourront lancer plusieur installation en même temps. </p>
+      <p>L'objectif est de pouvoir lancer les PC sans avoir besoin de booter sur la clef (Ce qui peut entrainer des modifications dans le BIOS) en utilisant seulement le réseau et un câble Ethernet comme matériel de plus nous pourront lancer plusieurs installations en même temps. </p>
     </div>
     <div class="container section-title"><h2>2. Déroulement</h2></div>
     <div class="container">
@@ -118,7 +109,7 @@
         <div class="slide"><img src="assets/img/pxe/wds-5.png" alt=""></div>
       </div>
       <div class="slide1">
-        <div class="slide"><p>1.2 - A la demande d’ajout des fonctionnalités, cliquez le bouton « Ajouter des fonctionnalités ».</p></div>
+        <div class="slide"><p>1.2 - À la demande d’ajout des fonctionnalités, cliquez le bouton « Ajouter des fonctionnalités ».</p></div>
         <div class="slide"><img src="assets/img/pxe/wds-6.png" alt=""></div>
       </div>
       <div class="slide1">
@@ -140,7 +131,7 @@
         <div class="slide"><img src="assets/img/pxe/wds-13.png" alt=""></div>
       </div>
       <div class="slide1">
-        <div class="slide"><p>2.3 - Et laissez tous par défaut mis a part l'"Options d'installation" ou il faut mettre dans mon cas "Intégré à Active Directory"</p></div>
+        <div class="slide"><p>2.3 - Et laissez tous par défaut mis a part l'<code>Options d'installation</code> où il faut mettre dans mon cas <code>Intégré à Active Directory</code></p></div>
         <div class="slide"><img src="assets/img/pxe/wds-16.png" alt=""></div>
       </div>
       <div class="slide1">
@@ -150,11 +141,11 @@
 
       <h3>3 - Image de démarrage et d'installation</h3>
       <div class="slide1">
-        <div class="slide"><p>3.1 - Dans la console de gestion du service WDS, faites un clic droit sur le nœud « Images de démarrage » et cliquez sur « Ajouter une image de démarrage ».</p></div>
+        <div class="slide"><p>3.1 - Dans la console de gestion du service WDS, faites un clic droit sur le nœud <code>Images de démarrage</code> et cliquez sur <code>Ajouter une image de démarrage</code>.</p></div>
         <div class="slide"><img src="assets/img/pxe/wds-28.png" alt=""></div>
       </div>
       <div class="slide1">
-        <div class="slide"><p>3.2 - Cliquez sur Parcourir et recherchez le fichier « boot.wim » qui est présent dans les fichier d'un ISO Windows puis choisir son nom</p></div>
+        <div class="slide"><p>3.2 - Cliquez sur Parcourir et recherchez le fichier <code>boot.wim</code> qui est présent dans les fichiers d'un ISO Windows puis choisir son nom</p></div>
         <div class="slide"><img src="assets/img/pxe/wds-29.png" alt=""></div>
       </div>
       <div class="slide1">
@@ -162,7 +153,7 @@
         <div class="slide"><img src="assets/img/pxe/wds-34.png" alt=""></div>
       </div>
       <div class="slide1">
-        <div class="slide"><p>3.4 - Toujours dans la console de gestion de WDS, faites cette fois-ci un clic droit sur « Image d’installation » et cliquez sur « Ajouter une image d’installation ».</p></div>
+        <div class="slide"><p>3.4 - Toujours dans la console de gestion de WDS, faites cette fois-ci un clic droit sur <code>Image d’installation</code> et cliquez sur <code>Ajouter une image d’installation</code>.</p></div>
         <div class="slide"><img src="assets/img/pxe/wds-35.png" alt=""></div>
       </div>
       <div class="slide1">
@@ -170,17 +161,17 @@
         <div class="slide"><img src="assets/img/pxe/wds-37.png" alt=""></div>
       </div>
       <div class="slide1">
-        <div class="slide"><p>3.6 - Voila l'image dans le grouê et prêt a l'utilisation</p></div>
+        <div class="slide"><p>3.6 - Voilà l'image dans le groupe et prêt a l'utilisation</p></div>
         <div class="slide"><img src="assets/img/pxe/wds-42.png" alt=""></div>
       </div>
 
       <h3>4 - Test</h3>
       <div class="slide1">
-        <div class="slide"><p>4.1 - Dès la mise sous tension, appuyez sur la touche F12 (la plupart du temps) puis selectionner LAN, PXE ou Network </p></div>
+        <div class="slide"><p>4.1 - Dès la mise sous tension, appuyez sur la touche F12 (la plupart du temps) puis sélectionner LAN, PXE ou Network </p></div>
         <div class="slide"><img src="assets/img/pxe/wds-43.png" alt=""></div>
       </div>
       <div class="slide1">
-        <div class="slide"><p>4.2 - La machine va se faire affecter un IP par le serveur DHCP puis grace a ça vas communiquer avec le serveur PXE</p></div>
+        <div class="slide"><p>4.2 - La machine va se faire affecter un IP par le serveur DHCP puis grace à ça va communiquer avec le serveur PXE</p></div>
         <div class="slide"><img src="assets/img/pxe/wds-44.png" alt=""></div>
       </div>
       <div class="slide1">
@@ -188,11 +179,11 @@
         <div class="slide"><img src="assets/img/pxe/wds-46.png" alt=""></div>
       </div>
       <div class="slide1">
-        <div class="slide"><p>4.4 - Une fois téléchargé, le programme d’installation de système d’exploitation va démarrer. Il reste plus qu'a faire un installation windows normal.</p></div>
+        <div class="slide"><p>4.4 - Une fois téléchargé, le programme d’installation de système d’exploitation va démarrer. Il reste plus qu'à faire une installation Windows normal.</p></div>
         <div class="slide"><img src="assets/img/pxe/wds-47.png" alt=""></div>
       </div>
       <div class="container section-title"><h2>3. Conclusion</h2></div>
-      <p>En conclusion, l'implémentation d'un serveur PXE dans un environnement réseau est un choix stratégique qui offre une multitude d'avantages significatifs. Il simplifie grandement le déploiement et la gestion des systèmes d'exploitation sur un grand nombre de machines, permettant ainsi un gain de temps considérable et une réduction des coûts opérationnels.De plus si on utilise un ISO personaliser tout ce fait automatiquement</p>
+      <p>En conclusion, l'implémentation d'un serveur PXE dans un environnement réseau est un choix stratégique qui offre une multitude d'avantages significatifs. Il simplifie grandement le déploiement et la gestion des systèmes d'exploitation sur un grand nombre de machines, permettant ainsi un gain de temps considérable et une réduction des coûts opérationnels.De plus si on utilise un ISO personnaliser tout ce fait automatiquement</p>
     </div>
 
   <!-- ======= Footer ======= -->

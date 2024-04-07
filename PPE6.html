@@ -49,16 +49,16 @@
     <div class="container section-title"><h2>Contexte et Compétences mises en oeuvre</h2></div>
     <div class="container">
       <h3>Contexte de ce Projet:</h3>
-      <p>La Mairie de Saint-Chamond reconnaît l'importance cruciale de son infrastructure informatique face à l'évolution constante des technologies la mairie s'engage à moderniser et à optimiser son patrimoine informatique pour répondre aux besoins actuels et futurs de la communauté. Le projet de remplacement du serveur de production s'inscrit dans cette volonté d'améliorer l'efficacité opérationnelle, de garantir la continuité des services et de renforcer la sécurité des systèmes informatiques de la mairie. Cette initiative vise à mettre en place une infrastructure robuste et performante et a pout but de centraliser nos VMs pour un meilleur gestion.</p>
-      <div class="slide1">
+      <p>La Mairie de Saint-Chamond reconnaît l'importance cruciale de son infrastructure informatique face à l'évolution constante des technologies, la mairie s'engage à moderniser et à optimiser son patrimoine informatique pour répondre aux besoins actuel et futur de la communauté. Le projet de remplacement du serveur de production s'inscrit dans cette volonté d'améliorer l'efficacité opérationnelle, de garantir la continuité des services et de renforcer la sécurité des systèmes informatiques de la mairie. Cette initiative vise à mettre en place une infrastructure robuste et performante et à pout but de centraliser nos VMs pour une meilleure gestion.</p>
+      <h4>L’organisation de projet:</h4>
+      <div class="slide1" style="align-items: start;">
         <div class="slide">
-          <h4>L’organisation de projet:</h4>
           <ul>
             <li><strong>Moyens et Techniques :</strong>
               <ol>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>Utilisation d'un serveur physique Dell pour héberger les machines virtuelles (VMs) essentielles à la Mairie de Saint-Chamond.</li>
+                <li>Installation de VMware ESXi sur le serveur via une clé USB bootable, permettant la virtualisation des systèmes d'exploitation.</li>
+                <li>Utilisation de vSphere 8.0 pour la gestion centralisée des VMs, y compris la création de datastores et la configuration des réseaux virtuels.</li>
               </ol>
             </li>        
           </ul>
@@ -67,20 +67,12 @@
           <ul>
             <li><strong>Référentiels et Directives :</strong>
               <ol>
-                <li></li>
-                <li></li>
+                <li>Suivi des recommandations du fabricant Dell pour la configuration de iDRAC et la gestion du matériel serveur.</li>
+                <li>Utilisation des guides officiels de VMware pour l'installation et la configuration d'ESXi, ainsi que pour la gestion des VMs avec vSphere.</li>
               </ol>
             </li>
           </ul>
         </div>
-      </div>
-      <div class="container" style="display: flex;justify-content: center;">
-        <li><strong>Contraintes du Projet :</strong>
-          <ol>
-            <li></li>
-            <li></li>
-          </ol>
-        </li>
       </div>
     </div>
   </section>
@@ -89,21 +81,21 @@
     <div class="container">
       <h3>Compétences Mises en Œuvre :</h3>
       <ul>
-        <li>Gérer le Patrimoine Informatique</li>
-        <li>Répondre aux Incidents et aux Demandes d'Assistance et d'Évolution</li>
-        <li>Développer la Présence en Ligne de l’Organisation</li>
-        <li>Travailler en Mode Projet</li>
-        <li>Mettre à Disposition des Utilisateurs un Service Informatique</li>
-        <li>Organiser son Développement Professionnel </li>
+        <li>Administration système et virtualisation avec l'installation et configuration d'un serveur Dell PowerEdge, installation d'ESXi 7.0, création de datastores, configuration de vSwitchs et de VLANs, migration de VMs avec vMotion.</li>
+        <li> Déploiement et gestion d'une infrastructure cloud VMware, création et gestion de centres de données, administration des VMs et des ressources, migration à chaud des VMs avec l'installation et configuration de vSphere 8.0, création d'un centre de données, ajout d'un hôte ESXi, gestion des VMs via vSphere Web Client, utilisation de vMotion pour la migration des VMs.</li>
+        <li>Mise en place de mesures de sécurité pour les serveurs et les VMs, configuration des accès et des permissions, respect des politiques de sécurité, surveillance et maintenance du système avec la configuration sécurisée du BIOS et d'iDRAC, mise en place d'un RAID 5, respect des politiques de sécurité pour les mots de passe et les permissions, surveillance et maintenance régulières du serveur et des VMs.</li>
       </ul>
-      <p>En mettant en œuvre ces compétences, l'équipe informatique de la Mairie de Saint-Chamond est déterminée à mener à bien le projet de remplacement du serveur de production et à garantir le succès de cette initiative stratégique pour l'organisation municipale et sa communauté.</p>
+      <p>Ce projet m'a permis de démontrer ma capacité à travailler de manière autonome et à gérer un projet de bout en bout. J'ai également appris à travailler en équipe et à communiquer efficacement avec les parties prenantes.</p>
+    </div>
+    <div class="container" style="display: flex; justify-content: center;">
+      <img src="assets/img/ppe6/vmware-vcenter.png" alt=""  width="30%">
     </div>
   </section>
 
   <div class="container section-title"><h2>1. Installation du serveur physique</h2></div>
   <div class="container">
     <ul>
-      <li><strong>Préparation du serveur:</strong> Assurez-vous que le serveur est correctement installé dans son rack, connecté à l'alimentation et au réseau, et que tous les composants hardware nécessaires sont installés (disques durs, cartes réseau, etc.).</li>
+      <li><strong>Préparation du serveur:</strong> Assurez-vous que le serveur est correctement installé dans son rack, connecté à l'alimentation et au réseau, et que tous les composants hardwares nécessaires sont installés (disques durs, cartes réseau, etc.).</li>
     </ul>
     <div class="container section-title"><h2>2. Installation et configuration de iDRAC (BIOS)</h2></div>
     <h3></h3>
@@ -113,13 +105,13 @@
       <li><strong>2.1 Modification de l'IP:</strong> Configurez l'adresse IP de iDRAC pour permettre une gestion à distance.</li>
       <li>
         <div class="slide1">
-          <div class="slide"><strong>2.2 Prise du serveur a distance avec son IP</strong></div>
+          <div class="slide"><strong>2.2 Prise du serveur à distance avec son IP</strong></div>
           <div class="slide"><img src="assets/img/ppe6/Capture d'écran 2024-02-02 154856.png" alt=""></div>
         </div>
       </li>
       <li>
         <div class="slide1">
-          <div class="slide"><strong>2.3 Modification de MDP: </strong>Sécurisez l'accès en modifiant le mot de passe par défaut. Dans <code>Paramètres de l'IDRAC</code> -> <code>Utilisateur</code> -> <code>Modifier</code>. Changer le MDP en respectant la politique de sécuriter</div>
+          <div class="slide"><strong>2.3 Modification de MDP: </strong>Sécurisez l'accès en modifiant le mot de passe par défaut. Dans <code>Paramètres de l'IDRAC</code> -> <code>Utilisateur</code> -> <code>Modifier</code>. Changer le MDP en respectant la politique de sécurité</div>
           <div class="slide"><img src="assets/img/ppe6/Capture1.png" alt=""></div>
         </div>
       </li>
@@ -139,7 +131,7 @@
         <ul>
           <li>
             <div class="slide1">
-              <div class="slide"><strong>Configuration de vSwitch:</strong> Connectez-vous à l'interface de gestion d'ESXi et configurez les vSwitches pour séparer le trafic réseau selon vos besoins (gestion, réseaux à part, stockage, etc.).</div>
+              <div class="slide"><strong>Configuration de vSwitch:</strong> Connectez-vous à l'interface de gestion d'ESXi et configurez-les vSwitches pour séparer le trafic réseau selon vos besoins (gestion, réseau à part, stockage, etc.).</div>
               <div class="slide"><img src="assets/img/ppe6/Capture5.png" alt=""></div>
             </div>
           </li>
@@ -157,7 +149,7 @@
     <section>
       <div class="container section-title"><h2>4. Configuration vSphere 8.0</h2></div>
       <ul>
-        <li><strong>Installation de vSphere:</strong> Créer une VM(bureautique) sur le ESXI et lancer l'exécuter qui se trouve dans l'ISO de vSphere, ensuite suivre le programme d'installation avec les paramètres voulu. Lui resegner Nom d'hôte, Nom d'utilisateru, Mot de passe. Ensuite lui lié un dossier et une ressource de calcule de l'ESXI et une banque de donné.</li>
+        <li><strong>Installation de vSphere:</strong> Créer une VM(bureautique) sur le ESXI et lancer l'exécuter qui se trouve dans l'ISO de vSphere, ensuite suivre le programme d'installation avec les paramètres voulus. Lui renseigner <code>Nom d'hôte</code>, <code>Nom d'utilisateru</code>, <code>Mot de passe</code>. Ensuite lui lié un dossier et une ressource de calcule de l'ESXI et une banque de donné.</li>
         <li>Pour finir il sufie de lancer la VM créer par l'ISO et supprimer la VM(bureautique) qui ne sert plus a rien.</li>
         <em>tuto détailler: https://www.youtube.com/watch?v=KpuTrlXnBuo</em>
       </ul>
@@ -172,7 +164,7 @@
           <ul>
             <li>Dans le volet de navigation de vSphere Web Client, sélectionnez l'inventaire.</li>
             <li>Cliquez avec le bouton droit de la souris sur le Datacenter où vous souhaitez créer le centre de données.</li>
-            <li>Choisissez "New Datacenter" et nommez-le selon vos préférences.</li>
+            <li>Choisissez <code>New Datacenter</code> et nommez-le selon vos préférences.</li>
           </ul>        
         </div>
         <div class="slide"><img src="assets/img/ppe6/Capture8.png" alt=""></div>
@@ -182,7 +174,7 @@
         <div class="slide"><strong>Ajout d'un Hôte ESXi au Centre de Données :</strong>
           <ul>
             <li>Dans vSphere Web Client, sélectionnez le centre de données que vous avez créé.</li>
-            <li>Cliquez avec le bouton droit de la souris sur le centre de données et choisissez "Add Host".</li>
+            <li>Cliquez avec le bouton droit de la souris sur le centre de données et choisissez <code>Add Host</code>.</li>
             <li>Entrez l'adresse IP ou le nom d'hôte de l'hôte ESXi que vous souhaitez ajouter.</li>
             <li>Entrez les informations d'identification de l'hôte ESXi et terminez le processus d'ajout.</li>
           </ul>        
@@ -194,17 +186,16 @@
 
     <section>
       <div class="container section-title"><h2>5. Migration de VMs à chaud</h2></div>
-      <p>Nous utilisont vSphere pour centraliser et controller nos ESXI un de ces outils clés est vMotion </p>
+      <p>Nous utilisons vSphere pour centraliser et contrôler nos ESXI un de ces outils clés est vMotion </p>
       <ul>
         <li><strong>Utilisation de vMotion:</strong> VMware vMotion permet de déplacer des VMs d'un serveur à un autre sans interruption de service. Configurez vMotion sur vos hôtes ESXi et utilisez le vCenter Server pour initier la migration.</li>
       </ul>
       <div class="slide1">
-        <div class="slide"><p>Pour cela aller dans <code>vSphere</code> -> <code>clic droit sur une VM</code> -> <code>Puis appuyer sur migrer</code>. Il ne reste plus qu'a choisir le nouveau serveur.</p><p>La migration ce fait avec les VMs a chaud et il ne doit pas y avoir de perte pendant le transfère</p></div>
+        <div class="slide"><p>Pour cela aller dans <code>vSphere</code> -> <code>clic droit sur une VM</code> -> <code>Puis appuyer sur migrer</code>. Il ne reste plus qu'à choisir le nouveau serveur.</p><p>La migration se fait avec les VMs a chaud et il ne doit pas y avoir de perte pendant le transfère</p></div>
         <div class="slide" style="display: flex;justify-content: center;"><img src="assets/img/ppe6/unnamed.png" alt="" style="width: 70%;"></div>
       </div>
     </section>
-    
-    
+  
   </div>
 
 
